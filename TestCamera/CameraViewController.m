@@ -8,6 +8,7 @@
 
 
 #import "CameraViewController.h"
+#import "CameraModeView.h"
 //#import "DBCameraView.h"
 #import <AVFoundation/AVFoundation.h>
 #define kTopBarHeight 44

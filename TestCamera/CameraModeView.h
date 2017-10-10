@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef enum : NSUInteger {
+    CameraModeSingleShotType,
+    CameraModeContinuousType,
+} CameraModeType;
 @interface CameraModeView : UIControl
+@property (nonatomic, assign) CameraModeType cameraModel;
 
 @end
