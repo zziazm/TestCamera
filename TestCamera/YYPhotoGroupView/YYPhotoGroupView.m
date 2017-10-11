@@ -128,6 +128,10 @@ static CGSize CGSizePixelCeil(CGSize size){
     _progressLayer.hidden = YES;
     [self.layer addSublayer:_progressLayer];
     
+    
+    
+    
+    
     return self;
 }
 
@@ -264,6 +268,8 @@ static CGSize CGSizePixelCeil(CGSize size){
 
 
 @property (nonatomic, strong) UIView *bottomView;
+
+@property (nonatomic, strong) UILabel * pageLabel;
 @end
 
 @implementation YYPhotoGroupView
@@ -354,7 +360,7 @@ static CGSize CGSizePixelCeil(CGSize size){
     if (groupItems.count == 0) {
         return nil;
     }
-    _groupItems = groupItems.copy;
+    _groupItems = groupItems.mutableCopy;
     _blurEffectBackground = NO;
     
     self.backgroundColor = [UIColor clearColor];
@@ -417,13 +423,13 @@ static CGSize CGSizePixelCeil(CGSize size){
 //    [self addSubview:_blurBackground];
     [self addSubview:_contentView];
     [_contentView addSubview:_scrollView];
-    [_contentView addSubview:_pager];
+//    [_contentView addSubview:_pager];
     
     
     _bottomView = [UIView new];
     _bottomView.frame = CGRectMake(0, kScreenHeight - kBottomBarHeight, kScreenWidth, kBottomBarHeight);
     _bottomView.backgroundColor = [UIColor redColor];
-    [_contentView addSubview:_bottomView];
+//    [_contentView addSubview:_bottomView];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     CGFloat buttonHeight = 20;
@@ -442,6 +448,21 @@ static CGSize CGSizePixelCeil(CGSize size){
     [_bottomView addSubview:button1];
     
     
+    _pageLabel = [[UILabel alloc] init];
+    _pageLabel.width = 150;
+    _pageLabel.height = 30;
+    _pageLabel.top = 20;
+    _pageLabel.centerX = kScreenWidth/2;
+    _pageLabel.textAlignment = NSTextAlignmentCenter;
+    [_contentView addSubview:_pageLabel];
+    
+    
+    UIButton * dbutton = [UIButton buttonWithType:UIButtonTypeCustom];
+    dbutton.frame = CGRectMake(10, 10, 100, 30);
+    [dbutton setTitle:@"shanchu" forState:UIControlStateNormal];
+    
+    [_contentView addSubview:dbutton];
+    [dbutton addTarget:self  action:@selector(deleteCurrentPage) forControlEvents:UIControlEventTouchUpInside];
     return self;
 }
 - (void)backAction{
@@ -577,7 +598,15 @@ static CGSize CGSizePixelCeil(CGSize size){
         
     }
 }
-
+- (void)reloadScrollView{
+    for (YYPhotoGroupCell * cell in _cells) {
+        [cell removeFromSuperview];
+    }
+    [_cells removeAllObjects];
+    _scrollView.contentSize = CGSizeMake(_scrollView.width * _groupItems.count, _scrollView.height);
+    [_scrollView scrollRectToVisible:CGRectMake(0, 0, _scrollView.width, _scrollView.height) animated:NO];
+    [self scrollViewDidScroll:_scrollView];
+}
 - (void)dismissAnimationed:(BOOL)animated completion:(void(^)(void))completion{
     [UIView setAnimationsEnabled:YES];
     [[UIApplication sharedApplication] setStatusBarHidden:_fromNavigationBarHidden withAnimation:animated ? UIStatusBarAnimationFade : UIStatusBarAnimationNone];
@@ -690,6 +719,11 @@ static CGSize CGSizePixelCeil(CGSize size){
 //        [obj.imageView sd_cancelCurrentImageLoad];
     }];
 }
+- (void)scrollToPage:(NSInteger)page{
+    if (page < self.groupItems.count) {
+        [_scrollView setContentOffset:CGPointMake(page*_scrollView.width, 0) animated:NO];
+    }
+}
 
 #pragma mark -- UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -719,11 +753,14 @@ static CGSize CGSizePixelCeil(CGSize size){
     NSInteger intPage = floatPage + 0.5;
     intPage = intPage < 0 ? 0 : (intPage > self.groupItems.count ? self.groupItems.count - 1 : intPage);
     _pager.currentPage = intPage;
+    [self setPageLabelText:intPage + 1];
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut animations:^{
         _pager.alpha = 1;
     } completion:nil];
 }
-
+- (void)setPageLabelText:(NSInteger)currentPage{
+    _pageLabel.text = [NSString stringWithFormat:@"%ld/%lu", (long)currentPage, (unsigned long)self.groupItems.count];
+}
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     if (!decelerate) {
         [self hidePager];
@@ -868,6 +905,35 @@ static CGSize CGSizePixelCeil(CGSize size){
     if (!toVC) toVC = self.viewController;
     [toVC presentViewController:activityViewController animated:YES completion:nil];
 }
+
+
+- (void)deleteCurrentPage{
+    if (_groupItems.count == 0) {
+        return;
+    }
+    if (_groupItems.count == 1) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(photoGroupView:didDeletePage:)]) {
+            [self.delegate photoGroupView:self didDeletePage:0];
+        }
+
+        [self dismiss];
+        return;
+    }
+    NSInteger page = self.currentPage;
+    NSInteger count = self.groupItems.count;
+    [_groupItems removeObjectAtIndex:page];
+    [self reloadScrollView];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(photoGroupView:didDeletePage:)]) {
+        [self.delegate photoGroupView:self didDeletePage:page];
+    }
+    if (page == count - 1) {
+        [self scrollToPage:_groupItems.count - 1];
+    }else{
+        [self scrollToPage:page];
+    }
+}
+
+
 
 - (void)pan:(UIPanGestureRecognizer *)g{
 //    switch (g.state) {

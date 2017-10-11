@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CameraModeView.h"
 @interface YYBrowserViewController : UIViewController
 - (instancetype)initWithItems:(NSArray *)items;
+@property (nonatomic, assign) CameraModeType modeType;
+@property (nonatomic, copy) void(^didDeleteImage)(NSInteger idx);
 @end

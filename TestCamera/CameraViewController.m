@@ -45,7 +45,6 @@
 - (void)didCaptureImageWithData:(NSData *)imageData{
     
 }
-    
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

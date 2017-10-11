@@ -10,7 +10,7 @@
 #import "UIView+YYAdd.h"
 #import "CameraModeView.h"
 #define kTopBarHeight 44
-#define kBottomBarHeight 80
+#define kBottomBarHeight 100
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define kIVWidth  60
@@ -103,6 +103,8 @@
 @property (nonatomic, strong) UILabel *ivCountLabel;
 @property (nonatomic, assign) NSInteger ivCount;
 @property (nonatomic, assign) CameraModeType modeType;
+@property (nonatomic, strong) NSMutableArray *continousImages;
+
 @end
 
 @implementation DKCamera
@@ -123,6 +125,10 @@
 + (BOOL)isAvailable{
     return [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
 }
+- (void)hideContinousImageView:(BOOL)hideden{
+    self.iv.hidden = hideden;
+    self.ivCountLabel.hidden = hideden;
+}
 - (instancetype)init{
     if (self = [super init]) {
         _allowsRotate = NO;
@@ -136,7 +142,9 @@
         _isStopped = NO;
         _bottomView = [CameraModeView new];
         _iv = [UIImageView new];
+        _continousImages = @[].mutableCopy;
         _ivCountLabel = [UILabel new];
+        [self hideContinousImageView:YES];
 //        _iv.hidden = YES;
 //        _ivCountLabel.hidden = YES;
     }
@@ -326,7 +334,7 @@
     self.contentView.backgroundColor = [UIColor clearColor];
     self.contentView.frame = self.view.bounds;
     
-    CGFloat bottomViewHeight = 100;
+    CGFloat bottomViewHeight = kBottomBarHeight;
     self.bottomView.frame = CGRectMake(0, _contentView.bounds.size.height - bottomViewHeight, _contentView.bounds.size.width, bottomViewHeight);
     self.bottomView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     [self.bottomView addTarget:self action:@selector(modeChange:) forControlEvents:UIControlEventValueChanged];
@@ -360,16 +368,30 @@
     
     [self.contentView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleFocus:)]];
     
-    CGFloat pad = (kBottomBarHeight - kIVWidth)/2;
+    CGFloat pad = 35;
     _iv.frame = CGRectMake(20, pad, kIVWidth, kIVWidth);
+    _iv.backgroundColor = [UIColor grayColor];
+    _iv.userInteractionEnabled = YES;
+    _iv.contentMode = UIViewContentModeScaleAspectFill;
+    _iv.clipsToBounds = YES;
+    [_iv setContentMode:[UIScreen mainScreen].scale];
+    _iv.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [_bottomView addSubview:_iv];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(browserContinousImages)];
+    [_iv addGestureRecognizer:tap];
     
-    CGFloat lW = 30;
+    
+
+    
+    CGFloat lW = 20;
     _ivCountLabel.frame = CGRectMake(0, 0, lW, lW);
     _ivCountLabel.layer.cornerRadius = lW/2;
     _ivCountLabel.layer.masksToBounds = YES;
-    _ivCountLabel.center = CGPointMake(kIVWidth - lW/2, -lW/2);
-    [_iv addSubview:_ivCountLabel];
+    _ivCountLabel.textColor = [UIColor whiteColor];
+    _ivCountLabel.textAlignment = UIViewContentModeScaleAspectFit;
+    _ivCountLabel.backgroundColor = [UIColor redColor];
+    _ivCountLabel.center = CGPointMake(_iv.right, _iv.top);
+    [_bottomView addSubview:_ivCountLabel];
     
     
     
@@ -486,7 +508,8 @@
     }
 }
 - (void)handleContinousImage:(UIImage *)image{
-    
+    [_continousImages addObject:image];
+    [self showContinousImageView];
 }
 - (void)handleSingleImage:(UIImage *)image{
     NSMutableArray * items = @[].mutableCopy;
@@ -494,8 +517,10 @@
     item.image = image;
     [items addObject:item];
     YYBrowserViewController * c = [[YYBrowserViewController alloc] initWithItems:items];
+    
     [self presentViewController:c animated:YES completion:nil];
 }
+
 - (void)handleZoom:(UIPinchGestureRecognizer *)gesture{
     if (gesture.state == UIGestureRecognizerStateBegan) {
         self.beginZoomScale = self.zoomScale;
@@ -655,7 +680,7 @@
     }
 }
 
--(void)    captureOutput:(AVCaptureOutput *)captureOutput
+-(void)captureOutput:(AVCaptureOutput *)captureOutput
 didOutputMetadataObjects:(NSArray *)metadataObjects
                     from:(AVCaptureConnection *)connection
 {
@@ -761,6 +786,27 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
 - (void)modeChange:(id)view{
     CameraModeView *modeView = view;
     self.modeType = modeView.cameraModel;
+    if (modeView.cameraModel == CameraModeSingleShotType) {
+        [self hideContinousImageView:YES];
+    }else{
+        if (self.continousImages.count > 0) {
+            [self showContinousImageView];
+        }else{
+            [self hideContinousImageView:YES];
+        }
+    }
+}
+
+- (void)showContinousImageView{
+    if (self.continousImages.count == 0){
+        [self hideContinousImageView:YES];
+        _iv.image = nil;
+        _ivCountLabel.text = @"";
+        return;
+    }
+    [self hideContinousImageView:NO];
+    _iv.image = self.continousImages.lastObject;
+    _ivCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.continousImages.count];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -768,6 +814,26 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
     // Dispose of any resources that can be recreated.
 }
 
+- (void)browserContinousImages{
+    if (_continousImages.count < 1) {
+        return;
+    }
+    NSMutableArray *items = @[].mutableCopy;
+    for (UIImage *image in _continousImages) {
+        YYPhotoGroupItem *item = [[YYPhotoGroupItem alloc] init];
+        item.image = image;
+        [items addObject:item];
+    }
+    YYBrowserViewController * vc = [[YYBrowserViewController alloc] initWithItems:items];
+    vc.modeType = CameraModeContinuousType;
+    [vc setDidDeleteImage:^(NSInteger idx) {
+        NSLog(@"%ld", (long)idx);
+        [self.continousImages removeObjectAtIndex:idx];
+        [self showContinousImageView];
+    }];
+    
+    [self presentViewController:vc animated:YES completion:nil];
+}
 /*
 #pragma mark - Navigation
 

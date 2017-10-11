@@ -19,11 +19,22 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImage *image;
 @end
 
+@class YYPhotoGroupView;
+@protocol YYPhotoGroupViewDelegate <NSObject>
+@optional
+- (void)photoGroupView:(YYPhotoGroupView *)photoGroupView
+         didDeletePage:(NSInteger)page;
+
+- (void)didDeleteLastPage;
+
+
+@end
 
 @interface YYPhotoGroupView : UIView
+@property (nonatomic, weak) id <YYPhotoGroupViewDelegate>delegate;
 @property (nonatomic, copy) void(^dismissCompletion)(void);
 
-@property (nonatomic, readonly) NSArray <YYPhotoGroupItem *> *groupItems;
+@property (nonatomic, readonly) NSMutableArray <YYPhotoGroupItem *> *groupItems;
 
 @property (nonatomic, readonly) NSInteger currentPage;
 
@@ -42,7 +53,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)dismissAnimated:(BOOL)animated;
 - (void)dismiss;
 - (void)dismissAnimationed:(BOOL)animated completion:(void(^)(void))completion;
-
+- (void)scrollToPage:(NSInteger)page;
+- (void)deleteCurrentPage;
 @end
 
 NS_ASSUME_NONNULL_END
