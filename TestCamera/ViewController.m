@@ -26,7 +26,6 @@
 - (IBAction)takePics:(id)sender {
     DKCamera * vc = [[DKCamera alloc] init];
     [self presentViewController:vc animated:YES completion:nil];
-
 //    [vc setDidCancel:^{
 //        [vc dismissViewControllerAnimated:YES completion:nil];
 //    }];

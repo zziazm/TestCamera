@@ -145,8 +145,6 @@
         _continousImages = @[].mutableCopy;
         _ivCountLabel = [UILabel new];
         [self hideContinousImageView:YES];
-//        _iv.hidden = YES;
-//        _ivCountLabel.hidden = YES;
     }
     return self;
 }
@@ -170,8 +168,6 @@
     [self updateFlashButton];
     [self updateFlashMode];
     [self updateFlashModeToUserDefautls:self.flashMode];
-    
-    
 }
 
 - (void)updateFlashModeToUserDefautls:(AVCaptureFlashMode)flashMode{
@@ -246,15 +242,18 @@
         }];
         [self updateSession:YES];
     }
+
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupDevices];
-    [self setupUI];
     [self setupSession];
-    
     [self setupMotionManager];
-    
+    [self setupUI];
     // Do any additional setup after loading the view.
 }
 
@@ -833,6 +832,10 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
     }];
     
     [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (BOOL)prefersStatusBarHidden{
+    return YES;
 }
 /*
 #pragma mark - Navigation

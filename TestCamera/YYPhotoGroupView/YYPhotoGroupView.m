@@ -915,7 +915,6 @@ static CGSize CGSizePixelCeil(CGSize size){
         if (self.delegate && [self.delegate respondsToSelector:@selector(photoGroupView:didDeletePage:)]) {
             [self.delegate photoGroupView:self didDeletePage:0];
         }
-
         [self dismiss];
         return;
     }
