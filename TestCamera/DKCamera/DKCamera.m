@@ -16,7 +16,9 @@
 #define kIVWidth  60
 #import "YYBrowserViewController.h"
 #import "YYPhotoGroupView.h"
-
+#import "DKImagePickController.h"
+#define kBackColor [UIColor colorWithRed:32/255.0 green:41/255.0 blue:56/255.0 alpha:1]
+#define kCurrentVersion [[[UIDevice currentDevice] systemVersion] intValue]
 
 
 @interface DKCaptureButton : UIButton
@@ -28,6 +30,7 @@
 - (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
     self.backgroundColor = [UIColor whiteColor];
     return  YES;
+    
 }
 
 
@@ -104,7 +107,7 @@
 @property (nonatomic, assign) NSInteger ivCount;
 @property (nonatomic, assign) CameraModeType modeType;
 @property (nonatomic, strong) NSMutableArray *continousImages;
-
+@property (nonatomic, strong) UIButton * completionButton;
 @end
 
 @implementation DKCamera
@@ -128,6 +131,7 @@
 - (void)hideContinousImageView:(BOOL)hideden{
     self.iv.hidden = hideden;
     self.ivCountLabel.hidden = hideden;
+    self.completionButton.hidden = hideden;
 }
 - (instancetype)init{
     if (self = [super init]) {
@@ -327,7 +331,7 @@
 }
 - (void)setupUI{
     
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = kBackColor;
     [self.view addSubview:self.contentView];
     
     self.contentView.backgroundColor = [UIColor clearColor];
@@ -392,12 +396,23 @@
     _ivCountLabel.center = CGPointMake(_iv.right, _iv.top);
     [_bottomView addSubview:_ivCountLabel];
     
-    
-    
-    
-    
-    
-    
+    _completionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _completionButton.frame = CGRectMake(0, 0, 100, 30);
+    _completionButton.left = kScreenWidth - 20 - _completionButton.width;
+    _completionButton.centerY = _iv.centerY;
+    [_completionButton setTitle:@"完成" forState:UIControlStateNormal];
+    [_bottomView addSubview:_completionButton];
+    [_completionButton addTarget:self action:@selector(completeAction:) forControlEvents: UIControlEventTouchUpInside];
+    _completionButton.hidden = YES;
+}
+
+- (void)completeAction:(id)btn{
+    DKImagePickController *d = (DKImagePickController *)self.navigationController;
+    if (d.didConfirmContinousImage) {
+        d.didConfirmContinousImage(self.continousImages);
+    }
+
+    [d dismissViewControllerAnimated:YES completion:nil];
 }
 - (void)setupDevices{
     NSArray<AVCaptureDevice *> * devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
@@ -444,7 +459,8 @@
 }
 
 - (void)dismiss{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
     if (self.didCancel) {
         self.didCancel();
     }
@@ -516,8 +532,15 @@
     item.image = image;
     [items addObject:item];
     YYBrowserViewController * c = [[YYBrowserViewController alloc] initWithItems:items];
-    
-    [self presentViewController:c animated:YES completion:nil];
+    __weak typeof (self) weakSelf = self;
+    [c setSingleConfirmAction:^{
+        DKImagePickController *d = (DKImagePickController *)weakSelf.navigationController;
+        if (d.didConfirmSingleImage) {
+            d.didConfirmSingleImage(image);
+        }
+    }];
+    [self.navigationController pushViewController:c animated:YES];
+//    [self presentViewController:c animated:YES completion:nil];
 }
 
 - (void)handleZoom:(UIPinchGestureRecognizer *)gesture{
@@ -830,8 +853,7 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
         [self.continousImages removeObjectAtIndex:idx];
         [self showContinousImageView];
     }];
-    
-    [self presentViewController:vc animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (BOOL)prefersStatusBarHidden{

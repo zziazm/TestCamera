@@ -18,7 +18,8 @@
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define kPadding 20
-#define kHiColor [UIColor colorWithRGBHex:0x2dd6b8]
+#define kHiColor [UIColor colorWithRGBHex:0x2dd6b8]dddddddd
+#define kBackColor [UIColor colorWithRed:32/255.0 green:41/255.0 blue:56/255.0 alpha:1]
 NSString * const yykitFadeAnimationKey  = @"yykit.fade";
 #define YY_CLAMP(_x_, _low_, _high_)  (((_x_) > (_high_)) ? (_high_) : (((_x_) < (_low_)) ? (_low_) : (_x_)))
 
@@ -109,7 +110,7 @@ static CGSize CGSizePixelCeil(CGSize size){
     
     _imageView = [UIImageView new];
     _imageView.clipsToBounds = YES;
-    _imageView.backgroundColor = [UIColor colorWithWhite:1.000 alpha:0.500];
+    _imageView.backgroundColor = kBackColor;//[UIColor colorWithWhite:1.000 alpha:0.500];
     [_imageContainerView addSubview:_imageView];
     
     _progressLayer = [CAShapeLayer layer];
@@ -394,9 +395,10 @@ static CGSize CGSizePixelCeil(CGSize size){
     _blurBackground = [[UIImageView alloc] init];
     _blurBackground.frame = self.bounds;
     _blurBackground.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    
+
     _contentView = [[UIView alloc] init];
     _contentView.frame = self.bounds;
+    _contentView.backgroundColor = kBackColor;
     _contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     _scrollView = [[UIScrollView alloc] init];
@@ -428,14 +430,14 @@ static CGSize CGSizePixelCeil(CGSize size){
     
     _bottomView = [UIView new];
     _bottomView.frame = CGRectMake(0, kScreenHeight - kBottomBarHeight, kScreenWidth, kBottomBarHeight);
-    _bottomView.backgroundColor = [UIColor redColor];
+    _bottomView.backgroundColor = [UIColor clearColor];//[UIColor redColor];
 //    [_contentView addSubview:_bottomView];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     CGFloat buttonHeight = 20;
     button.frame = CGRectMake(20, (_bottomView.height - buttonHeight)/2, 60, buttonHeight);
     [button setTitle:@"返回" forState: UIControlStateNormal];
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
     [_bottomView addSubview:button];
     
@@ -443,7 +445,7 @@ static CGSize CGSizePixelCeil(CGSize size){
 //    CGFloat buttonHeight = 20;
     button1.frame = CGRectMake(kScreenWidth - 60 - 20, (_bottomView.height - buttonHeight)/2, 60, buttonHeight);
     [button1 setTitle:@"确定" forState: UIControlStateNormal];
-    [button1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [button1 addTarget:self action:@selector(button1Action) forControlEvents:UIControlEventTouchUpInside];
     [_bottomView addSubview:button1];
     
@@ -453,16 +455,17 @@ static CGSize CGSizePixelCeil(CGSize size){
     _pageLabel.height = 30;
     _pageLabel.top = 20;
     _pageLabel.centerX = kScreenWidth/2;
+    _pageLabel.textColor = [UIColor whiteColor];
     _pageLabel.textAlignment = NSTextAlignmentCenter;
     [_contentView addSubview:_pageLabel];
     
     
-    UIButton * dbutton = [UIButton buttonWithType:UIButtonTypeCustom];
-    dbutton.frame = CGRectMake(10, 10, 100, 30);
-    [dbutton setTitle:@"shanchu" forState:UIControlStateNormal];
-    
-    [_contentView addSubview:dbutton];
-    [dbutton addTarget:self  action:@selector(deleteCurrentPage) forControlEvents:UIControlEventTouchUpInside];
+//    UIButton * dbutton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    dbutton.frame = CGRectMake(10, 10, 100, 30);
+//    [dbutton setTitle:@"shanchu" forState:UIControlStateNormal];
+//
+//    [_contentView addSubview:dbutton];
+//    [dbutton addTarget:self  action:@selector(deleteCurrentPage) forControlEvents:UIControlEventTouchUpInside];
     return self;
 }
 - (void)backAction{
@@ -470,7 +473,7 @@ static CGSize CGSizePixelCeil(CGSize size){
         self.dismissCompletion();
     }
 }
-- (void)presentFromImageView:(UIView *)fromView toContainer:(UIView *)toContainer animated:(BOOL)animated completion:(void (^)())completion{
+- (void)presentFromImageView:(UIView *)fromView toContainer:(UIView *)toContainer animated:(BOOL)animated completion:(void (^)(void))completion{
     if (!toContainer) {
         return;
     }

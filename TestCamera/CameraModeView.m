@@ -14,8 +14,6 @@
 #define kNotForegroundColor [UIColor whiteColor]
 #define kBackColor [UIColor colorWithRed:32/255.0 green:41/255.0 blue:56/255.0 alpha:1]
 
-
-
 @interface CameraModeView ()
 
 @property (nonatomic, strong) UIView *labelContainerView;
@@ -25,6 +23,7 @@
 
 @property (nonatomic, strong) UILabel * singleLabel;
 @property (nonatomic, strong) UILabel * continousLabel;
+
 @end
 
 @implementation CameraModeView

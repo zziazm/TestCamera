@@ -12,4 +12,5 @@
 - (instancetype)initWithItems:(NSArray *)items;
 @property (nonatomic, assign) CameraModeType modeType;
 @property (nonatomic, copy) void(^didDeleteImage)(NSInteger idx);
+@property (nonatomic, copy) void(^singleConfirmAction)(void);
 @end

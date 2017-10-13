@@ -14,6 +14,7 @@
 		9813BC0C1F8C9F7900FC1D50 /* UIView+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 9813BC071F8C9F7800FC1D50 /* UIView+YYAdd.m */; };
 		9813BC131F8CB46D00FC1D50 /* YYPhotoGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9813BC121F8CB46C00FC1D50 /* YYPhotoGroupView.m */; };
 		9813BC161F8CB4AD00FC1D50 /* YYBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9813BC151F8CB4AD00FC1D50 /* YYBrowserViewController.m */; };
+		984A054E1F8F673C0042D775 /* DKImagePickController.m in Sources */ = {isa = PBXBuildFile; fileRef = 984A054D1F8F673C0042D775 /* DKImagePickController.m */; };
 		98D1029B1F8B094B00013695 /* DKCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D102991F8B094A00013695 /* DKCamera.m */; };
 		98D1029C1F8B094B00013695 /* DKCameraResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 98D1029A1F8B094A00013695 /* DKCameraResource.bundle */; };
 		98E64B4F1F7E21D100922A65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E64B4E1F7E21D100922A65 /* AppDelegate.m */; };
@@ -67,6 +68,8 @@
 		9813BC121F8CB46C00FC1D50 /* YYPhotoGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYPhotoGroupView.m; sourceTree = "<group>"; };
 		9813BC141F8CB4AD00FC1D50 /* YYBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYBrowserViewController.h; sourceTree = "<group>"; };
 		9813BC151F8CB4AD00FC1D50 /* YYBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYBrowserViewController.m; sourceTree = "<group>"; };
+		984A054C1F8F673C0042D775 /* DKImagePickController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKImagePickController.h; sourceTree = "<group>"; };
+		984A054D1F8F673C0042D775 /* DKImagePickController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKImagePickController.m; sourceTree = "<group>"; };
 		98D102981F8B094A00013695 /* DKCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCamera.h; sourceTree = "<group>"; };
 		98D102991F8B094A00013695 /* DKCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCamera.m; sourceTree = "<group>"; };
 		98D1029A1F8B094A00013695 /* DKCameraResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DKCameraResource.bundle; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 				9813BC051F8C9F7800FC1D50 /* UIImage+YYAdd.m */,
 				9813BC061F8C9F7800FC1D50 /* UIView+YYAdd.h */,
 				9813BC071F8C9F7800FC1D50 /* UIView+YYAdd.m */,
+				984A054C1F8F673C0042D775 /* DKImagePickController.h */,
+				984A054D1F8F673C0042D775 /* DKImagePickController.m */,
 			);
 			path = YYPhotoGroupView;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 				9813BC0A1F8C9F7900FC1D50 /* NSString+YYAdd.m in Sources */,
 				9813BC001F8B67B300FC1D50 /* UIView+YYAdd.m in Sources */,
 				98E64B9D1F7E22B100922A65 /* CameraViewController.m in Sources */,
+				984A054E1F8F673C0042D775 /* DKImagePickController.m in Sources */,
 				9813BC161F8CB4AD00FC1D50 /* YYBrowserViewController.m in Sources */,
 				9813BBFB1F8B622900FC1D50 /* CameraModeView.m in Sources */,
 				9813BC131F8CB46D00FC1D50 /* YYPhotoGroupView.m in Sources */,
