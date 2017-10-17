@@ -20,6 +20,14 @@
 #define kBackColor [UIColor colorWithRed:32/255.0 green:41/255.0 blue:56/255.0 alpha:1]
 #define kCurrentVersion [[[UIDevice currentDevice] systemVersion] intValue]
 
+#import "PWBrowserImageViewController.h"
+
+#define kLabelWidth 100
+#define kLabelFont 14
+#define kForegroundColor [UIColor colorWithRed:1 green:0.7 blue:0.006 alpha:1]
+#define kNotForegroundColor [UIColor whiteColor]
+
+
 
 @interface DKCaptureButton : UIButton
 
@@ -108,6 +116,15 @@
 @property (nonatomic, assign) CameraModeType modeType;
 @property (nonatomic, strong) NSMutableArray *continousImages;
 @property (nonatomic, strong) UIButton * completionButton;
+
+
+
+
+@property (nonatomic, strong) UIView *labelContainerView;
+@property (nonatomic, strong) UIColor * foregroundColor;
+
+@property (nonatomic, strong) UILabel * singleLabel;
+@property (nonatomic, strong) UILabel * continousLabel;
 @end
 
 @implementation DKCamera
@@ -255,9 +272,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupDevices];
+    [self setupUI];
     [self setupSession];
     [self setupMotionManager];
-    [self setupUI];
     // Do any additional setup after loading the view.
 }
 
@@ -292,7 +309,8 @@
     
     CALayer * rootLayer = self.view.layer;
     rootLayer.masksToBounds = YES;
-    [rootLayer insertSublayer:self.previewLayer atIndex:0];
+    [rootLayer addSublayer:self.previewLayer];
+//    [rootLayer insertSublayer:self.previewLayer atIndex:0];
 }
 
 #pragma mark -- AVCaptureMetadataOutputObjectsDelegate
@@ -329,32 +347,19 @@
     }
     return _captureButton;
 }
+
 - (void)setupUI{
-    
     self.view.backgroundColor = kBackColor;
     [self.view addSubview:self.contentView];
-    
     self.contentView.backgroundColor = [UIColor clearColor];
     self.contentView.frame = self.view.bounds;
     
     CGFloat bottomViewHeight = kBottomBarHeight;
-    self.bottomView.frame = CGRectMake(0, _contentView.bounds.size.height - bottomViewHeight, _contentView.bounds.size.width, bottomViewHeight);
-    self.bottomView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-    [self.bottomView addTarget:self action:@selector(modeChange:) forControlEvents:UIControlEventValueChanged];
-//    self.bottomView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.4];
-    
-    [self.contentView addSubview:self.bottomView];
-    
-    self.cameraSwitchButton.frame = CGRectMake(_bottomView.bounds.size.width - self.cameraSwitchButton.bounds.size.width - 15, ( self.bottomView.bounds.size.height - self.cameraSwitchButton.bounds.size.height ) / 2, self.cameraSwitchButton.frame.size.width, self.cameraSwitchButton.frame.size.height);
-    self.cameraSwitchButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin |UIViewAutoresizingFlexibleBottomMargin;
-    
-    
-//    [self.bottomView addSubview:self.cameraSwitchButton];
-    
-    self.captureButton.center = CGPointMake(self.bottomView.bounds.size.width / 2, self.bottomView.bounds.size.height / 2 + 15);
+
+    self.captureButton.center = CGPointMake(self.contentView.bounds.size.width / 2, kScreenHeight - 7 - self.captureButton.height/2);
     self.captureButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-    [self.bottomView addSubview:self.captureButton];
-    
+    [self.contentView addSubview:self.captureButton];
+
     
     UIButton * cancelButton = [UIButton new];
     [cancelButton addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
@@ -367,24 +372,71 @@
     self.flashButton.frame = CGRectMake(5, 10, self.flashButton.frame.size.width, self.flashButton.frame.size.height);
     [self.contentView addSubview:self.flashButton];
     
-    [self.contentView addGestureRecognizer:[[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handleZoom:)]];
+//  [self.contentView addGestureRecognizer:[[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handleZoom:)]];
     
     [self.contentView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleFocus:)]];
     
+    UIView *circle = [UIView new];
+    circle.width = 6;
+    circle.height = 6;
+    circle.layer.cornerRadius = 3;
+    circle.layer.masksToBounds = YES;
+    circle.backgroundColor = kForegroundColor;
+    circle.top = kScreenHeight - kBottomBarHeight + 2;
+    circle.centerX = self.contentView.centerX;
+    [self.contentView addSubview:circle];
+    
+    self.labelContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight - kBottomBarHeight + 8, 2*kLabelWidth, 20)];
+
+    [self.contentView addSubview:self.labelContainerView];
+    self.labelContainerView.centerX = self.contentView.centerX + kLabelWidth/2;
+    
+    
+    self.foregroundColor = kForegroundColor;
+    
+    self.singleLabel = [UILabel new];
+    self.singleLabel.textColor = kForegroundColor;
+    self.singleLabel.textAlignment = NSTextAlignmentCenter;
+    self.singleLabel.frame = CGRectMake(0, 0, kLabelWidth, 20);
+    self.singleLabel.text = @"single";
+    self.singleLabel.font = [UIFont systemFontOfSize:14];
+    self.singleLabel.userInteractionEnabled = YES;
+    [self.labelContainerView addSubview: self.singleLabel];
+    UITapGestureRecognizer * tapSingle = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSingle)];
+    [self.singleLabel addGestureRecognizer:tapSingle];
+    
+    self.continousLabel = [UILabel new];
+    self.continousLabel.textColor = kNotForegroundColor;
+    self.continousLabel.font = [UIFont systemFontOfSize:14];
+    self.continousLabel.frame = CGRectMake(kLabelWidth, 0, kLabelWidth, 20);
+    self.continousLabel.text = @"continous";
+    self.continousLabel.textAlignment = NSTextAlignmentCenter;
+    [self.labelContainerView addSubview: self.continousLabel];
+    UITapGestureRecognizer * tapContinious = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapContinious)];
+    self.continousLabel .userInteractionEnabled = YES;
+    [self.continousLabel addGestureRecognizer:tapContinious];
+    
+    UISwipeGestureRecognizer * right = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(switchModel:)];//UISwipeGestureRecognizer(target: self, action: #selector(switchModel(_:)))
+    UISwipeGestureRecognizer * left = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(switchModel:)];
+    left.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.contentView addGestureRecognizer:left];
+    [self.contentView addGestureRecognizer:right];
+    
+    
     CGFloat pad = 35;
-    _iv.frame = CGRectMake(20, pad, kIVWidth, kIVWidth);
+    _iv.frame = CGRectMake(20, kScreenHeight - kIVWidth - 5 , kIVWidth, kIVWidth);
     _iv.backgroundColor = [UIColor grayColor];
     _iv.userInteractionEnabled = YES;
     _iv.contentMode = UIViewContentModeScaleAspectFill;
     _iv.clipsToBounds = YES;
     [_iv setContentMode:[UIScreen mainScreen].scale];
     _iv.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    [_bottomView addSubview:_iv];
+    [_contentView addSubview:_iv];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(browserContinousImages)];
     [_iv addGestureRecognizer:tap];
     
     
-
+    
     
     CGFloat lW = 20;
     _ivCountLabel.frame = CGRectMake(0, 0, lW, lW);
@@ -394,16 +446,58 @@
     _ivCountLabel.textAlignment = UIViewContentModeScaleAspectFit;
     _ivCountLabel.backgroundColor = [UIColor redColor];
     _ivCountLabel.center = CGPointMake(_iv.right, _iv.top);
-    [_bottomView addSubview:_ivCountLabel];
+    [_contentView addSubview:_ivCountLabel];
     
     _completionButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _completionButton.frame = CGRectMake(0, 0, 100, 30);
+    _completionButton.frame = CGRectMake(0, 0, 60, 30);
     _completionButton.left = kScreenWidth - 20 - _completionButton.width;
     _completionButton.centerY = _iv.centerY;
     [_completionButton setTitle:@"完成" forState:UIControlStateNormal];
-    [_bottomView addSubview:_completionButton];
+    [_contentView addSubview:_completionButton];
     [_completionButton addTarget:self action:@selector(completeAction:) forControlEvents: UIControlEventTouchUpInside];
     _completionButton.hidden = YES;
+}
+
+- (void)switchModel:(UISwipeGestureRecognizer *)recognizer{
+    //1. 判断手势滑动方向
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+        [self scrollRightAnimation];
+    }else{
+        [self scrollLeftAnimation];
+        
+    }
+}
+
+- (void)tapSingle{
+    [self scrollLeftAnimation];
+}
+
+- (void)tapContinious{
+    [self scrollRightAnimation];
+}
+
+- (void)scrollLeftAnimation{
+    [UIView animateWithDuration:0.28 animations:^{
+        self.labelContainerView.centerX = self.contentView.centerX + kLabelWidth/2;
+    } completion:^(BOOL finished) {
+        if (self.modeType != CameraModeSingleShotType) {
+            self.modeType = CameraModeSingleShotType;
+            self.singleLabel.textColor = self.foregroundColor;
+            self.continousLabel.textColor = kNotForegroundColor;
+        }
+    }];
+}
+
+- (void)scrollRightAnimation{
+    [UIView animateWithDuration:0.28 animations:^{
+        self.labelContainerView.centerX = self.contentView.centerX - kLabelWidth/2;
+    } completion:^(BOOL finished) {
+        if (self.modeType != CameraModeContinuousType) {
+            self.modeType = CameraModeContinuousType;
+            self.continousLabel.textColor = kForegroundColor;
+            self.singleLabel.textColor = kNotForegroundColor;
+        }
+    }];
 }
 
 - (void)completeAction:(id)btn{
@@ -426,7 +520,7 @@
     }
     
     switch (self.defaultCaptureDevice) {
-        case DKCameraDeviceSourceFrontType:
+        case PWCameraDeviceSourceFrontType:
             self.currentDevice = self.captureDeviceFront?:self.captureDeviceRear;
             break;
         case DKCameraDeviceSourceRearType:
@@ -522,16 +616,18 @@
         });
     }
 }
+
 - (void)handleContinousImage:(UIImage *)image{
     [_continousImages addObject:image];
     [self showContinousImageView];
 }
+
 - (void)handleSingleImage:(UIImage *)image{
     NSMutableArray * items = @[].mutableCopy;
     YYPhotoGroupItem * item = [[YYPhotoGroupItem alloc] init];
     item.image = image;
     [items addObject:item];
-    YYBrowserViewController * c = [[YYBrowserViewController alloc] initWithItems:items];
+    PWBrowserImageViewController * c = [[PWBrowserImageViewController alloc] initWithGroupItems:items];
     __weak typeof (self) weakSelf = self;
     [c setSingleConfirmAction:^{
         DKImagePickController *d = (DKImagePickController *)weakSelf.navigationController;
@@ -540,7 +636,16 @@
         }
     }];
     [self.navigationController pushViewController:c animated:YES];
-//    [self presentViewController:c animated:YES completion:nil];
+//    YYBrowserViewController * c = [[YYBrowserViewController alloc] initWithItems:items];
+//    __weak typeof (self) weakSelf = self;
+//    [c setSingleConfirmAction:^{
+//        DKImagePickController *d = (DKImagePickController *)weakSelf.navigationController;
+//        if (d.didConfirmSingleImage) {
+//            d.didConfirmSingleImage(image);
+//
+//        }
+//    }];
+//    [self.navigationController pushViewController:c animated:YES];
 }
 
 - (void)handleZoom:(UIPinchGestureRecognizer *)gesture{
@@ -790,7 +895,6 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
     }
 }
 
-
 + (UIDeviceOrientation)toDeviceOrientationFor:(CMAcceleration)acceleration{
     if (acceleration.x >= 0.75) {
         return UIDeviceOrientationLandscapeRight;
@@ -819,6 +923,8 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
     }
 }
 
+
+
 - (void)showContinousImageView{
     if (self.continousImages.count == 0){
         [self hideContinousImageView:YES];
@@ -836,6 +942,18 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setModeType:(CameraModeType)modeType{
+    _modeType = modeType;
+    if (modeType == CameraModeSingleShotType) {
+        [self hideContinousImageView:YES];
+    }else{
+        if (self.continousImages.count > 0) {
+            [self showContinousImageView];
+        }else{
+            [self hideContinousImageView:YES];
+        }
+    }
+}
 - (void)browserContinousImages{
     if (_continousImages.count < 1) {
         return;
@@ -846,19 +964,29 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
         item.image = image;
         [items addObject:item];
     }
-    YYBrowserViewController * vc = [[YYBrowserViewController alloc] initWithItems:items];
+    
+    PWBrowserImageViewController  * vc = [[PWBrowserImageViewController alloc] initWithGroupItems:items];
     vc.modeType = CameraModeContinuousType;
     [vc setDidDeleteImage:^(NSInteger idx) {
-        NSLog(@"%ld", (long)idx);
         [self.continousImages removeObjectAtIndex:idx];
         [self showContinousImageView];
     }];
     [self.navigationController pushViewController:vc animated:YES];
+//    YYBrowserViewController * vc = [[YYBrowserViewController alloc] initWithItems:items];
+//    vc.modeType = CameraModeContinuousType;
+//    [vc setDidDeleteImage:^(NSInteger idx) {
+//        NSLog(@"%ld", (long)idx);
+//        [self.continousImages removeObjectAtIndex:idx];
+//        [self showContinousImageView];
+//    }];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (BOOL)prefersStatusBarHidden{
     return YES;
 }
+
+
 /*
 #pragma mark - Navigation
 

@@ -14,6 +14,7 @@
 		9813BC0C1F8C9F7900FC1D50 /* UIView+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 9813BC071F8C9F7800FC1D50 /* UIView+YYAdd.m */; };
 		9813BC131F8CB46D00FC1D50 /* YYPhotoGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9813BC121F8CB46C00FC1D50 /* YYPhotoGroupView.m */; };
 		9813BC161F8CB4AD00FC1D50 /* YYBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9813BC151F8CB4AD00FC1D50 /* YYBrowserViewController.m */; };
+		984969021F94A39800A35A30 /* PWBrowserImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 984969011F94A39800A35A30 /* PWBrowserImageViewController.m */; };
 		984A054E1F8F673C0042D775 /* DKImagePickController.m in Sources */ = {isa = PBXBuildFile; fileRef = 984A054D1F8F673C0042D775 /* DKImagePickController.m */; };
 		98D1029B1F8B094B00013695 /* DKCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D102991F8B094A00013695 /* DKCamera.m */; };
 		98D1029C1F8B094B00013695 /* DKCameraResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 98D1029A1F8B094A00013695 /* DKCameraResource.bundle */; };
@@ -68,6 +69,8 @@
 		9813BC121F8CB46C00FC1D50 /* YYPhotoGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYPhotoGroupView.m; sourceTree = "<group>"; };
 		9813BC141F8CB4AD00FC1D50 /* YYBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYBrowserViewController.h; sourceTree = "<group>"; };
 		9813BC151F8CB4AD00FC1D50 /* YYBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYBrowserViewController.m; sourceTree = "<group>"; };
+		984969001F94A39800A35A30 /* PWBrowserImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWBrowserImageViewController.h; sourceTree = "<group>"; };
+		984969011F94A39800A35A30 /* PWBrowserImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PWBrowserImageViewController.m; sourceTree = "<group>"; };
 		984A054C1F8F673C0042D775 /* DKImagePickController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKImagePickController.h; sourceTree = "<group>"; };
 		984A054D1F8F673C0042D775 /* DKImagePickController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKImagePickController.m; sourceTree = "<group>"; };
 		98D102981F8B094A00013695 /* DKCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCamera.h; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 		9813BC011F8C9F7800FC1D50 /* YYPhotoGroupView */ = {
 			isa = PBXGroup;
 			children = (
+				984969001F94A39800A35A30 /* PWBrowserImageViewController.h */,
+				984969011F94A39800A35A30 /* PWBrowserImageViewController.m */,
 				9813BC141F8CB4AD00FC1D50 /* YYBrowserViewController.h */,
 				9813BC151F8CB4AD00FC1D50 /* YYBrowserViewController.m */,
 				9813BC111F8CB46C00FC1D50 /* YYPhotoGroupView.h */,
@@ -387,6 +392,7 @@
 				9813BBFB1F8B622900FC1D50 /* CameraModeView.m in Sources */,
 				9813BC131F8CB46D00FC1D50 /* YYPhotoGroupView.m in Sources */,
 				98E64B5D1F7E21D100922A65 /* main.m in Sources */,
+				984969021F94A39800A35A30 /* PWBrowserImageViewController.m in Sources */,
 				98E64B4F1F7E21D100922A65 /* AppDelegate.m in Sources */,
 				9813BC0C1F8C9F7900FC1D50 /* UIView+YYAdd.m in Sources */,
 				98D1029B1F8B094B00013695 /* DKCamera.m in Sources */,
@@ -561,7 +567,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zm.TestCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -578,7 +584,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zm.TestCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

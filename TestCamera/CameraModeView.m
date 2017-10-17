@@ -38,16 +38,6 @@
     return self;
 }
 
-//- (CATextLayer *)textLayerWithTitle:(NSString *)title{
-//    CATextLayer * layer = [CATextLayer new];
-//    UIFont * font = [UIFont fontWithName:@"AvenirNextCondensed-DemiBold" size:17];
-////    layer.font = font.fontName;
-//    layer.fontSize = 17;
-//    layer.string = title;
-//    layer.alignmentMode = @"center";
-//    layer.contentsScale = [UIScreen mainScreen].scale;//UIScreen.mainScreen().scale
-//    return layer;
-//}
 - (void)setupView{
     self.backgroundColor = kBackColor;
     
@@ -66,13 +56,6 @@
     [self.labelContainerView addSubview: self.singleLabel];
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSingle)];
     [self.singleLabel addGestureRecognizer:tap];
-    
-    
-    
-//    self.videoTextLayer = [self textLayerWithTitle:@"单拍"];
-//    self.videoTextLayer.frame = CGRectMake(0, 0, 60, 20);
-//    self.videoTextLayer.foregroundColor = self.foregroundColor.CGColor;
-//    [self.labelContainerView.layer addSublayer: self.videoTextLayer];
 
     self.continousLabel = [UILabel new];
     self.continousLabel.textColor = kNotForegroundColor;
@@ -84,10 +67,7 @@
     UITapGestureRecognizer * tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapContinious)];
     self.continousLabel .userInteractionEnabled = YES;
     [self.continousLabel addGestureRecognizer:tap1];
-//    self.photoTextLayer = [self textLayerWithTitle:@"连拍"];
-//    self.photoTextLayer.frame = CGRectMake(60, 0, 60, 20);
-//    [self.labelContainerView.layer addSublayer:self.photoTextLayer];
-    
+
     UISwipeGestureRecognizer * right = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(switchModel:)];//UISwipeGestureRecognizer(target: self, action: #selector(switchModel(_:)))
     UISwipeGestureRecognizer * left = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(switchModel:)];
     left.direction = UISwipeGestureRecognizerDirectionLeft;

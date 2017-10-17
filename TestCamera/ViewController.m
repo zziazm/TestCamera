@@ -23,7 +23,7 @@ static NSString * const url = @"http://10.150.200.216/sdcconnectmobile/index/ind
 - (void)viewDidLoad {
     [super viewDidLoad];
     _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
-    [self.view addSubview:_webView];
+//    [self.view addSubview:_webView];
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     request.timeoutInterval = 10;
     [self.webView loadRequest:request];
@@ -32,8 +32,15 @@ static NSString * const url = @"http://10.150.200.216/sdcconnectmobile/index/ind
 
 - (IBAction)takePics:(id)sender {
    
-    DKCamera * vc = [[DKCamera alloc] init];
-    [self presentViewController:vc animated:YES completion:nil];
+    DKImagePickController *pc =  [[DKImagePickController alloc] init];
+    __weak typeof(self) weakSelf = self;
+    [pc setDidConfirmSingleImage:^(UIImage *image) {
+        [weakSelf rtnImageToHtml:image];
+    }];
+    [pc setDidConfirmContinousImage:^(NSArray *images) {
+        
+    }];
+    [self presentViewController:pc animated:YES completion:nil];
 }
 
 #pragma mark -- UIWebViewDelegate

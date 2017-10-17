@@ -28,10 +28,9 @@
 @end
 
 typedef enum : NSUInteger {
-    DKCameraDeviceSourceFrontType,
+    PWCameraDeviceSourceFrontType,
     DKCameraDeviceSourceRearType,
-} DKCameraDeviceSourceType;
-
+} PWCameraDeviceSourceType;
 
 @interface DKCamera : UIViewController<AVCaptureMetadataOutputObjectsDelegate>
 
@@ -46,7 +45,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) UIView * contentView;
 @property (nonatomic, strong) AVCaptureSession * captureSession;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer * previewLayer;
-@property (nonatomic, assign) DKCameraDeviceSourceType defaultCaptureDevice;
+@property (nonatomic, assign) PWCameraDeviceSourceType defaultCaptureDevice;
 @property (nonatomic, strong) AVCaptureDevice * currentDevice;
 @property (nonatomic, strong) AVCaptureDevice * captureDeviceFront;
 @property (nonatomic, strong) AVCaptureDevice * captureDeviceRear;
