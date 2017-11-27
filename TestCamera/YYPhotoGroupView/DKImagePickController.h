@@ -11,4 +11,5 @@
 @interface DKImagePickController : UINavigationController
 @property (nonatomic, copy) void(^didConfirmSingleImage)(UIImage *);
 @property (nonatomic, copy) void(^didConfirmContinousImage)(NSArray *);
+@property (nonatomic, assign) NSInteger maxCaptureCount;
 @end

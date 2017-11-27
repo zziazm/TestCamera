@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
+#import "PwCSSOHelper.h"
 @interface AppDelegate ()
 
 @end
@@ -39,12 +40,33 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    [PwCSSOHelper checkSSOOffline];
+
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)resumeFromOfflineSSO:(BOOL)authenticated
+{
+    
+    if (!authenticated)
+    {
+        
+//        UIStoryboard *storybaord=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//        ViewController *vc  = [storybaord instantiateViewControllerWithIdentifier:@"ViewController"];
+        ViewController *vc=(ViewController *)self.window.rootViewController;
+//        UIViewController *homeViewController= [nav.viewControllers objectAtIndex:0];
+//        
+        if([vc respondsToSelector:@selector(loadAfterAuthenticated)])
+            [vc performSelector:@selector(loadAfterAuthenticated)];
+    }
+//        if([vc respondsToSelector:@selector(headerRereshing)])
+//            [vc performSelector:@selector(headerRereshing)];
+//    }
 }
 
 

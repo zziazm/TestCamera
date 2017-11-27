@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PWCameraViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMotion/CoreMotion.h>
 
@@ -27,10 +28,10 @@
 
 @end
 
-typedef enum : NSUInteger {
-    PWCameraDeviceSourceFrontType,
-    DKCameraDeviceSourceRearType,
-} PWCameraDeviceSourceType;
+//typedef enum : NSUInteger {
+//    PWCameraDeviceSourceFrontType,
+//    DKCameraDeviceSourceRearType,
+//} PWCameraDeviceSourceType;
 
 @interface DKCamera : UIViewController<AVCaptureMetadataOutputObjectsDelegate>
 

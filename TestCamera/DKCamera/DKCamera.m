@@ -438,10 +438,11 @@
     
     
     
-    CGFloat lW = 20;
+    CGFloat lW = 25;
     _ivCountLabel.frame = CGRectMake(0, 0, lW, lW);
     _ivCountLabel.layer.cornerRadius = lW/2;
     _ivCountLabel.layer.masksToBounds = YES;
+    _ivCountLabel.adjustsFontSizeToFitWidth  = YES;
     _ivCountLabel.textColor = [UIColor whiteColor];
     _ivCountLabel.textAlignment = UIViewContentModeScaleAspectFit;
     _ivCountLabel.backgroundColor = [UIColor redColor];
@@ -452,7 +453,7 @@
     _completionButton.frame = CGRectMake(0, 0, 60, 30);
     _completionButton.left = kScreenWidth - 20 - _completionButton.width;
     _completionButton.centerY = _iv.centerY;
-    [_completionButton setTitle:@"完成" forState:UIControlStateNormal];
+    [_completionButton setTitle:@"finish" forState:UIControlStateNormal];
     [_contentView addSubview:_completionButton];
     [_completionButton addTarget:self action:@selector(completeAction:) forControlEvents: UIControlEventTouchUpInside];
     _completionButton.hidden = YES;
@@ -593,6 +594,10 @@
                             CGImageRef cropCGImage = CGImageCreateWithImageInRect(takenCGImage, cropRect);
                             
                             UIImage * cropTakenImage = [UIImage imageWithCGImage:cropCGImage scale:1 orientation:takenImage.imageOrientation];
+                            
+                            
+                            cropTakenImage = [self imageByScalingAndCroppingForSize:CGSizeMake(cropTakenImage.size.width/10, cropTakenImage.size.height/10) withSourceImage:cropTakenImage];
+                            
                             if (self.modeType == CameraModeSingleShotType) {
                                 [self handleSingleImage:cropTakenImage];
                             }else{
@@ -616,6 +621,56 @@
         });
     }
 }
+
+- (UIImage*)imageByScalingAndCroppingForSize:(CGSize)targetSize withSourceImage:(UIImage *)sourceImage
+{
+    UIImage *newImage = nil;
+    CGSize imageSize = sourceImage.size;
+    CGFloat width = imageSize.width;
+    CGFloat height = imageSize.height;
+    CGFloat targetWidth = targetSize.width;
+    CGFloat targetHeight = targetSize.height;
+    CGFloat scaleFactor = 0.0;
+    CGFloat scaledWidth = targetWidth;
+    CGFloat scaledHeight = targetHeight;
+    CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
+    if (CGSizeEqualToSize(imageSize, targetSize) == NO)
+    {
+        CGFloat widthFactor = targetWidth / width;
+        CGFloat heightFactor = targetHeight / height;
+        if (widthFactor > heightFactor)
+        scaleFactor = widthFactor; // scale to fit height
+        else
+        scaleFactor = heightFactor; // scale to fit width
+        scaledWidth= width * scaleFactor;
+        scaledHeight = height * scaleFactor;
+        // center the image
+        if (widthFactor > heightFactor)
+        {
+            thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
+        }
+        else if (widthFactor < heightFactor)
+        {
+            thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+        }
+    }
+    UIGraphicsBeginImageContext(targetSize); // this will crop
+    CGRect thumbnailRect = CGRectZero;
+    thumbnailRect.origin = thumbnailPoint;
+    thumbnailRect.size.width= scaledWidth;
+    thumbnailRect.size.height = scaledHeight;
+    
+    [sourceImage drawInRect:thumbnailRect];
+    newImage = UIGraphicsGetImageFromCurrentImageContext();
+    if(newImage == nil)
+    NSLog(@"could not scale image");
+    
+    //pop the context to get back to the default
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
 
 - (void)handleContinousImage:(UIImage *)image{
     [_continousImages addObject:image];

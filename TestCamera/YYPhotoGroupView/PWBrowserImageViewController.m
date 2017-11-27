@@ -10,10 +10,11 @@
 #define kPad 10
 #import "UIView+YYAdd.h"
 #define kTopBarHeight 44
-#define kBottomBarHeight 44
+#define kBottomBarHeight 95
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define kPadding 20
+#define kBackgroundColor [UIColor blackColor]
 #define kHiColor [UIColor colorWithRGBHex:0x2dd6b8]dddddddd
 #define kBackColor [UIColor colorWithRed:32/255.0 green:41/255.0 blue:56/255.0 alpha:1]
 
@@ -28,6 +29,7 @@
 @implementation PWPhotoGroupItem
 - (id)copyWithZone:(nullable NSZone *)zone{
     PWPhotoGroupItem * item = [self.class new];
+    
     return item;
 }
 
@@ -68,7 +70,7 @@
     
     _imageView = [UIImageView new];
     _imageView.clipsToBounds = YES;
-    _imageView.backgroundColor = kBackColor;//[UIColor colorWithWhite:1.000 alpha:0.500];
+    _imageView.backgroundColor = kBackgroundColor;//[UIColor colorWithWhite:1.000 alpha:0.500];
     [_imageContainerView addSubview:_imageView];
     return self;
 }
@@ -101,7 +103,7 @@
     
 }
 
-- (void)resizeSubviewSize{
+- (void)resizeSubviewSize {
     _imageContainerView.origin = CGPointZero;
     _imageContainerView.width = self.width;
     
@@ -181,6 +183,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = kBackgroundColor;
     UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
     tap2.delegate= self;
     tap2.numberOfTapsRequired = 2;
@@ -190,39 +193,46 @@
     
     _bottomView = [UIView new];
     _bottomView.frame = CGRectMake(0, kScreenHeight - kBottomBarHeight, kScreenWidth, kBottomBarHeight);
-    _bottomView.backgroundColor = kBackColor;//[UIColor redColor];
+    _bottomView.backgroundColor = kBackgroundColor;//[UIColor redColor];
     [self.view addSubview:_bottomView];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     CGFloat buttonHeight = 20;
-    button.frame = CGRectMake(20, (_bottomView.height - buttonHeight)/2, 60, buttonHeight);
-    [button setTitle:@"返回" forState: UIControlStateNormal];
+    button.frame = CGRectMake(20, (_bottomView.height - buttonHeight)/2 , 60, buttonHeight);
+    if (_modeType == CameraModeSingleShotType) {
+        [button setTitle:@"Retake" forState: UIControlStateNormal];
+
+    }else{
+        [button setTitle:@"Back" forState: UIControlStateNormal];
+
+    }
+    button.titleLabel.font = [UIFont systemFontOfSize:17];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
     [_bottomView addSubview:button];
     
     UIButton *button1 = [UIButton buttonWithType:UIButtonTypeSystem];
     //    CGFloat buttonHeight = 20;
-    button1.frame = CGRectMake(kScreenWidth - 60 - 20, (_bottomView.height - buttonHeight)/2, 60, buttonHeight);
+    button1.titleLabel.font = [UIFont systemFontOfSize:17];
+    button1.frame = CGRectMake(kScreenWidth - 80 - 20, (_bottomView.height - buttonHeight)/2, 80, buttonHeight);
     [button1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     if (_modeType == CameraModeSingleShotType) {
         [button1 addTarget:self action:@selector(button1Action) forControlEvents:UIControlEventTouchUpInside];
-        [button1 setTitle:@"确定" forState: UIControlStateNormal];
+        [button1 setTitle:@"Use photo" forState: UIControlStateNormal];
     }else{
         [button1 addTarget:self action:@selector(deleteCurrentImage) forControlEvents:UIControlEventTouchUpInside];
-        [button1 setTitle:@"删除" forState: UIControlStateNormal];
+        [button1 setTitle:@"Delete" forState: UIControlStateNormal];
     }
-    
     
     [_bottomView addSubview:button1];
     [self.view addSubview:_bottomView];
     
     if (_modeType == CameraModeContinuousType) {
         _pageLabel = [[UILabel alloc] init];
-        _pageLabel.width = 150;
+        _pageLabel.width = 200;
         _pageLabel.height = 30;
-        _pageLabel.top = 20;
         _pageLabel.centerX = kScreenWidth/2;
+        _pageLabel.centerY = kTopBarHeight/2;
         _pageLabel.textColor = [UIColor whiteColor];
         _pageLabel.textAlignment = NSTextAlignmentCenter;
         [self.view addSubview:_pageLabel];
@@ -235,18 +245,31 @@
 }
 
 - (UICollectionView *)collectionView{
+//    if (!_collectionView) {
+//        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+//        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+//        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width + kPad, [UIScreen mainScreen].bounds.size.height) collectionViewLayout: layout];
+//        _collectionView.contentInset = UIEdgeInsetsMake(-20, 0, 0, kPad);
+//        _collectionView.delegate = self;
+//        _collectionView.dataSource = self;
+//        _collectionView.pagingEnabled = YES;
+//        layout.minimumLineSpacing = kPad;
+//        [_collectionView registerClass:[DKPhotoGroupCell class] forCellWithReuseIdentifier:@"cell"];
+//        _collectionView.backgroundColor = kBackgroundColor;
+//    }
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width + kPad, [UIScreen mainScreen].bounds.size.height) collectionViewLayout: layout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, kTopBarHeight, [UIScreen mainScreen].bounds.size.width + kPad, [UIScreen mainScreen].bounds.size.height - kTopBarHeight - kBottomBarHeight) collectionViewLayout: layout];
         _collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, kPad);
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.pagingEnabled = YES;
         layout.minimumLineSpacing = kPad;
         [_collectionView registerClass:[DKPhotoGroupCell class] forCellWithReuseIdentifier:@"cell"];
-        _collectionView.backgroundColor = kBackColor;
+        _collectionView.backgroundColor = kBackgroundColor;
     }
+    
     return _collectionView;
 }
 
@@ -327,8 +350,8 @@
 
 #pragma mark -- UICollectionViewDelegate
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    return CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 64);
+     
+    return CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - kBottomBarHeight - kTopBarHeight);
 }
 
 #pragma mark -- UIScrollViewDelegate

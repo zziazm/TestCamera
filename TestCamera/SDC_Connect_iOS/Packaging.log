@@ -1,0 +1,1085 @@
+2017-11-24 06:05:12 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7faf10dbf010; archive(resolved)='<IDEArchive: 0x7faf0768d340>', distributionTask(resolved)='2', distributionMethod(resolved)='<IDEDistributionMethodiOSEnterprise: 0x7faf1ff3ebd0>', team(resolved)='<IDEProvisioningBasicTeam 0x7faf10b2b610: teamID: 54SFE2ZV26, teamName: PricewaterhouseCoopers Limited>'>
+	Chain (11, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7faf10dbf010; archive = '<IDEArchive: 0x7faf0768d340>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7faf1ff3ebd0>', team='<IDEProvisioningBasicTeam 0x7faf10b2b610: teamID: 54SFE2ZV26, teamName: PricewaterhouseCoopers Limited>'>
+	<IDEDistributionProcessingPipelineContext: 0x7faf10c04370; archive = '<IDEArchive: 0x7faf0768d340>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7faf1ff3ebd0>', team='<IDEProvisioningBasicTeam 0x7faf10b2b610: teamID: 54SFE2ZV26, teamName: PricewaterhouseCoopers Limited>'>
+	<IDEDistributionContext: 0x7faf0d60cf40; archive = '<IDEArchive: 0x7faf0768d340>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7faf1ff3ebd0>', team='<IDEProvisioningBasicTeam 0x7faf10b2b610: teamID: 54SFE2ZV26, teamName: PricewaterhouseCoopers Limited>'>
+	<IDEDistributionContext: 0x7faf0e0fb1d0; archive = '<IDEArchive: 0x7faf0768d340>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7faf1ff3ebd0>', team='<IDEProvisioningBasicTeam 0x7faf10b2b610: teamID: 54SFE2ZV26, teamName: PricewaterhouseCoopers Limited>'>
+	<IDEDistributionContext: 0x7faf0e485b70; archive = '<IDEArchive: 0x7faf0768d340>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7faf1ff3ebd0>', team='<IDEProvisioningBasicTeam 0x7faf10b2b610: teamID: 54SFE2ZV26, teamName: PricewaterhouseCoopers Limited>'>
+	<IDEDistributionContext: 0x7faf1037d190; archive = '<IDEArchive: 0x7faf0768d340>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7faf1ff3ebd0>', team='<IDEProvisioningBasicTeam 0x7faf10b2b610: teamID: 54SFE2ZV26, teamName: PricewaterhouseCoopers Limited>'>
+	<IDEDistributionContext: 0x7faf0c82ac40; archive = '<IDEArchive: 0x7faf0768d340>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7faf1ff3ebd0>', team='<IDEProvisioningBasicTeam 0x7faf10b2b610: teamID: 54SFE2ZV26, teamName: PricewaterhouseCoopers Limited>'>
+	<IDEDistributionContext: 0x7faf10ba29c0; archive = '<IDEArchive: 0x7faf0768d340>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7faf1ff3ebd0>', team='<IDEProvisioningBasicTeam 0x7faf10b2b610: teamID: 54SFE2ZV26, teamName: PricewaterhouseCoopers Limited>'>
+	<IDEDistributionContext: 0x7faf0d38a490; archive = '<IDEArchive: 0x7faf0768d340>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7faf1ff3ebd0>', team='<IDEProvisioningBasicTeam 0x7faf10b2b610: teamID: 54SFE2ZV26, teamName: PricewaterhouseCoopers Limited>'>
+	<IDEDistributionContext: 0x7faf1110d1a0; archive = '<IDEArchive: 0x7faf0768d340>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7faf1ff3ebd0>', team='(null)'>
+	<IDEDistributionContext: 0x7faf1039ba10; archive = '<IDEArchive: 0x7faf0768d340>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7faf10dbf010>
+2017-11-24 06:05:12 +0000  Processing step: IDEDistributionCreateDestRootStep
+2017-11-24 06:05:12 +0000  Processing step: IDEDistributionCopyItemStep
+2017-11-24 06:05:12 +0000  Running /usr/bin/ditto '-V' '/Users/zm/Library/Developer/Xcode/Archives/2017-11-24/TestCamera 2017-11-24 下午2.04.xcarchive/Products/Applications/TestCamera.app' '/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/XcodeDistPipeline.yWo/Root/Payload/TestCamera.app'
+2017-11-24 06:05:12 +0000  >>> Copying /Users/zm/Library/Developer/Xcode/Archives/2017-11-24/TestCamera 2017-11-24 下午2.04.xcarchive/Products/Applications/TestCamera.app 
+2017-11-24 06:05:12 +0000  
+2017-11-24 06:05:12 +0000  copying file ./_CodeSignature/CodeResources ... 
+2017-11-24 06:05:12 +0000  23025 bytes for ./_CodeSignature/CodeResources
+2017-11-24 06:05:12 +0000  copying file ./AppIcon20x20@2x.png ... 
+2017-11-24 06:05:12 +0000  2598 bytes for ./AppIcon20x20@2x.png
+2017-11-24 06:05:12 +0000  copying file ./AppIcon20x20@2x~ipad.png ... 
+2017-11-24 06:05:12 +0000  2598 bytes for ./AppIcon20x20@2x~ipad.png
+copying file ./AppIcon20x20@3x.png ... 
+2017-11-24 06:05:12 +0000  4332 bytes for ./AppIcon20x20@3x.png
+copying file ./AppIcon20x20~ipad.png ... 
+2017-11-24 06:05:12 +0000  1023 bytes for ./AppIcon20x20~ipad.png
+2017-11-24 06:05:12 +0000  copying file ./AppIcon29x29@2x.png ... 
+2017-11-24 06:05:12 +0000  4158 bytes for ./AppIcon29x29@2x.png
+copying file ./AppIcon29x29@2x~ipad.png ... 
+2017-11-24 06:05:12 +0000  4158 bytes for ./AppIcon29x29@2x~ipad.png
+2017-11-24 06:05:12 +0000  copying file ./AppIcon29x29@3x.png ... 
+2017-11-24 06:05:12 +0000  7066 bytes for ./AppIcon29x29@3x.png
+copying file ./AppIcon29x29~ipad.png ... 
+2017-11-24 06:05:12 +0000  1739 bytes for ./AppIcon29x29~ipad.png
+2017-11-24 06:05:12 +0000  copying file ./AppIcon40x40@2x.png ... 
+2017-11-24 06:05:12 +0000  6472 bytes for ./AppIcon40x40@2x.png
+copying file ./AppIcon40x40@2x~ipad.png ... 
+2017-11-24 06:05:12 +0000  6472 bytes for ./AppIcon40x40@2x~ipad.png
+copying file ./AppIcon40x40@3x.png ... 
+2017-11-24 06:05:12 +0000  10452 bytes for ./AppIcon40x40@3x.png
+2017-11-24 06:05:12 +0000  copying file ./AppIcon40x40~ipad.png ... 
+2017-11-24 06:05:12 +0000  2598 bytes for ./AppIcon40x40~ipad.png
+copying file ./AppIcon60x60@2x.png ... 
+2017-11-24 06:05:12 +0000  10452 bytes for ./AppIcon60x60@2x.png
+2017-11-24 06:05:12 +0000  copying file ./AppIcon60x60@3x.png ... 
+2017-11-24 06:05:12 +0000  17368 bytes for ./AppIcon60x60@3x.png
+copying file ./AppIcon76x76@2x~ipad.png ... 
+2017-11-24 06:05:12 +0000  14080 bytes for ./AppIcon76x76@2x~ipad.png
+2017-11-24 06:05:12 +0000  copying file ./AppIcon76x76~ipad.png ... 
+2017-11-24 06:05:12 +0000  5924 bytes for ./AppIcon76x76~ipad.png
+copying file ./AppIcon83.5x83.5@2x~ipad.png ... 
+2017-11-24 06:05:12 +0000  15862 bytes for ./AppIcon83.5x83.5@2x~ipad.png
+2017-11-24 06:05:12 +0000  copying file ./archived-expanded-entitlements.xcent ... 
+2017-11-24 06:05:12 +0000  289 bytes for ./archived-expanded-entitlements.xcent
+copying file ./Assets.car ... 
+2017-11-24 06:05:12 +0000  162696 bytes for ./Assets.car
+2017-11-24 06:05:12 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2017-11-24 06:05:12 +0000  1791 bytes for ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+2017-11-24 06:05:12 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2017-11-24 06:05:12 +0000  258 bytes for ./Base.lproj/LaunchScreen.storyboardc/Info.plist
+copying file ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+832 bytes for ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+2017-11-24 06:05:12 +0000  copying file ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib ... 
+2017-11-24 06:05:12 +0000  3060 bytes for ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+2017-11-24 06:05:12 +0000  copying file ./Base.lproj/Main.storyboardc/Info.plist ... 
+2017-11-24 06:05:12 +0000  197 bytes for ./Base.lproj/Main.storyboardc/Info.plist
+copying file ./Base.lproj/Main.storyboardc/ViewController.nib ... 
+2017-11-24 06:05:12 +0000  993 bytes for ./Base.lproj/Main.storyboardc/ViewController.nib
+2017-11-24 06:05:12 +0000  copying file ./Disconnection.html ... 
+2017-11-24 06:05:12 +0000  1211 bytes for ./Disconnection.html
+2017-11-24 06:05:12 +0000  copying file ./DKCameraResource.bundle/Images/camera_cancel.png ... 
+2017-11-24 06:05:12 +0000  358 bytes for ./DKCameraResource.bundle/Images/camera_cancel.png
+2017-11-24 06:05:12 +0000  copying file ./DKCameraResource.bundle/Images/camera_cancel@2x.png ... 
+2017-11-24 06:05:12 +0000  598 bytes for ./DKCameraResource.bundle/Images/camera_cancel@2x.png
+2017-11-24 06:05:12 +0000  copying file ./DKCameraResource.bundle/Images/camera_cancel@3x.png ... 
+2017-11-24 06:05:12 +0000  1011 bytes for ./DKCameraResource.bundle/Images/camera_cancel@3x.png
+copying file ./DKCameraResource.bundle/Images/camera_flash_auto.png ... 
+2017-11-24 06:05:12 +0000  537 bytes for ./DKCameraResource.bundle/Images/camera_flash_auto.png
+2017-11-24 06:05:12 +0000  copying file ./DKCameraResource.bundle/Images/camera_flash_auto@2x.png ... 
+2017-11-24 06:05:12 +0000  1170 bytes for ./DKCameraResource.bundle/Images/camera_flash_auto@2x.png
+copying file ./DKCameraResource.bundle/Images/camera_flash_auto@3x.png ... 
+2017-11-24 06:05:12 +0000  1829 bytes for ./DKCameraResource.bundle/Images/camera_flash_auto@3x.png
+2017-11-24 06:05:12 +0000  copying file ./DKCameraResource.bundle/Images/camera_flash_off.png ... 
+508 bytes for ./DKCameraResource.bundle/Images/camera_flash_off.png
+copying file ./DKCameraResource.bundle/Images/camera_flash_off@2x.png ... 
+2017-11-24 06:05:12 +0000  979 bytes for ./DKCameraResource.bundle/Images/camera_flash_off@2x.png
+2017-11-24 06:05:12 +0000  copying file ./DKCameraResource.bundle/Images/camera_flash_off@3x.png ... 
+1595 bytes for ./DKCameraResource.bundle/Images/camera_flash_off@3x.png
+copying file ./DKCameraResource.bundle/Images/camera_flash_on.png ... 
+2017-11-24 06:05:12 +0000  415 bytes for ./DKCameraResource.bundle/Images/camera_flash_on.png
+copying file ./DKCameraResource.bundle/Images/camera_flash_on@2x.png ... 
+2017-11-24 06:05:12 +0000  810 bytes for ./DKCameraResource.bundle/Images/camera_flash_on@2x.png
+2017-11-24 06:05:12 +0000  copying file ./DKCameraResource.bundle/Images/camera_flash_on@3x.png ... 
+2017-11-24 06:05:12 +0000  1386 bytes for ./DKCameraResource.bundle/Images/camera_flash_on@3x.png
+copying file ./DKCameraResource.bundle/Images/camera_switch.png ... 
+2017-11-24 06:05:12 +0000  645 bytes for ./DKCameraResource.bundle/Images/camera_switch.png
+copying file ./DKCameraResource.bundle/Images/camera_switch@2x.png ... 
+2017-11-24 06:05:12 +0000  1342 bytes for ./DKCameraResource.bundle/Images/camera_switch@2x.png
+copying file ./DKCameraResource.bundle/Images/camera_switch@3x.png ... 
+2017-11-24 06:05:12 +0000  2311 bytes for ./DKCameraResource.bundle/Images/camera_switch@3x.png
+2017-11-24 06:05:12 +0000  copying file ./embedded.mobileprovision ... 
+2017-11-24 06:05:12 +0000  51726 bytes for ./embedded.mobileprovision
+2017-11-24 06:05:12 +0000  copying file ./Info.plist ... 
+2017-11-24 06:05:12 +0000  1831 bytes for ./Info.plist
+copying file ./LaunchImage-700-568h@2x.png ... 
+2017-11-24 06:05:12 +0000  14942 bytes for ./LaunchImage-700-568h@2x.png
+copying file ./PkgInfo ... 
+2017-11-24 06:05:12 +0000  8 bytes for ./PkgInfo
+2017-11-24 06:05:12 +0000  copying file ./PWCameraResource.bundle/Images/camera_cancel.png ... 
+2017-11-24 06:05:12 +0000  358 bytes for ./PWCameraResource.bundle/Images/camera_cancel.png
+2017-11-24 06:05:12 +0000  copying file ./PWCameraResource.bundle/Images/camera_cancel@2x.png ... 
+2017-11-24 06:05:12 +0000  598 bytes for ./PWCameraResource.bundle/Images/camera_cancel@2x.png
+copying file ./PWCameraResource.bundle/Images/camera_cancel@3x.png ... 
+1011 bytes for ./PWCameraResource.bundle/Images/camera_cancel@3x.png
+copying file ./PWCameraResource.bundle/Images/camera_flash_auto.png ... 
+2017-11-24 06:05:12 +0000  537 bytes for ./PWCameraResource.bundle/Images/camera_flash_auto.png
+2017-11-24 06:05:12 +0000  copying file ./PWCameraResource.bundle/Images/camera_flash_auto@2x.png ... 
+2017-11-24 06:05:12 +0000  1170 bytes for ./PWCameraResource.bundle/Images/camera_flash_auto@2x.png
+copying file ./PWCameraResource.bundle/Images/camera_flash_auto@3x.png ... 
+2017-11-24 06:05:12 +0000  1829 bytes for ./PWCameraResource.bundle/Images/camera_flash_auto@3x.png
+copying file ./PWCameraResource.bundle/Images/camera_flash_off.png ... 
+2017-11-24 06:05:12 +0000  508 bytes for ./PWCameraResource.bundle/Images/camera_flash_off.png
+2017-11-24 06:05:12 +0000  copying file ./PWCameraResource.bundle/Images/camera_flash_off@2x.png ... 
+2017-11-24 06:05:12 +0000  979 bytes for ./PWCameraResource.bundle/Images/camera_flash_off@2x.png
+copying file ./PWCameraResource.bundle/Images/camera_flash_off@3x.png ... 
+2017-11-24 06:05:12 +0000  1595 bytes for ./PWCameraResource.bundle/Images/camera_flash_off@3x.png
+copying file ./PWCameraResource.bundle/Images/camera_flash_on.png ... 
+2017-11-24 06:05:12 +0000  415 bytes for ./PWCameraResource.bundle/Images/camera_flash_on.png
+2017-11-24 06:05:12 +0000  copying file ./PWCameraResource.bundle/Images/camera_flash_on@2x.png ... 
+2017-11-24 06:05:12 +0000  810 bytes for ./PWCameraResource.bundle/Images/camera_flash_on@2x.png
+copying file ./PWCameraResource.bundle/Images/camera_flash_on@3x.png ... 
+2017-11-24 06:05:12 +0000  1386 bytes for ./PWCameraResource.bundle/Images/camera_flash_on@3x.png
+copying file ./PWCameraResource.bundle/Images/camera_switch.png ... 
+2017-11-24 06:05:12 +0000  645 bytes for ./PWCameraResource.bundle/Images/camera_switch.png
+2017-11-24 06:05:12 +0000  copying file ./PWCameraResource.bundle/Images/camera_switch@2x.png ... 
+2017-11-24 06:05:12 +0000  1342 bytes for ./PWCameraResource.bundle/Images/camera_switch@2x.png
+2017-11-24 06:05:12 +0000  copying file ./PWCameraResource.bundle/Images/camera_switch@3x.png ... 
+2017-11-24 06:05:12 +0000  2311 bytes for ./PWCameraResource.bundle/Images/camera_switch@3x.png
+copying file ./PWCameraResource.bundle/Images/camera_trigger.png ... 
+2017-11-24 06:05:12 +0000  1362 bytes for ./PWCameraResource.bundle/Images/camera_trigger.png
+2017-11-24 06:05:12 +0000  copying file ./PWCameraResource.bundle/Images/camera_trigger@2x.png ... 
+2017-11-24 06:05:12 +0000  1879 bytes for ./PWCameraResource.bundle/Images/camera_trigger@2x.png
+copying file ./PWCameraResource.bundle/Images/camera_trigger@3x.png ... 
+2017-11-24 06:05:12 +0000  3482 bytes for ./PWCameraResource.bundle/Images/camera_trigger@3x.png
+copying file ./TestCamera ... 
+2017-11-24 06:05:12 +0000  3581696 bytes for ./TestCamera
+2017-11-24 06:05:12 +0000  /usr/bin/ditto exited with 0
+2017-11-24 06:05:12 +0000  Processing step: IDEDistributionEmbedProfileStep
+2017-11-24 06:05:12 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2017-11-24 06:05:12 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2017-11-24 06:05:12 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2017-11-24 06:05:12 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/ipatool '/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/XcodeDistPipeline.yWo/Root' '--json' '/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool-json-filepath-KekxnM' '--compile-bitcode' '--output' '/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/IDEIPAProcessor.AppThinning.Qr9' '--toolchain' '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr' '--platforms' '/Applications/Xcode.app/Contents/Developer/Platforms'
+2017-11-24 06:05:12 +0000  ruby 2.0.0p648 (2015-12-16 revision 53162) [universal.x86_64-darwin16]
+2017-11-24 06:05:12 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/ipatool:1594: warning: assigned but unused variable - minVersion
+/Applications/Xcode.app/Contents/Developer/usr/bin/ipatool:1594: warning: assigned but unused variable - sdkVersion
+/Applications/Xcode.app/Contents/Developer/usr/bin/ipatool:1603: warning: assigned but unused variable - sourceVersion
+2017-11-24 06:05:12 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/ipatool:1705: warning: shadowing outer local variable - node
+2017-11-24 06:05:12 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/ipatool:2472: warning: shadowing outer local variable - machoFile
+2017-11-24 06:05:12 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/ipatool:2472: warning: shadowing outer local variable - machoImage
+2017-11-24 06:05:12 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/ipatool:2664: warning: assigned but unused variable - flag
+/Applications/Xcode.app/Contents/Developer/usr/bin/ipatool:2664: warning: assigned but unused variable - transformer
+2017-11-24 06:05:12 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/ipatool:2914: warning: assigned but unused variable - exc
+2017-11-24 06:05:12 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/ipatool:739: warning: assigned but unused variable - output
+2017-11-24 06:05:12 +0000  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/gems/2.0.0/gems/libxml-ruby-2.6.0/lib/libxml/schema/type.rb:8: warning: method redefined; discarding old annotation
+2017-11-24 06:05:12 +0000  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/gems/2.0.0/gems/libxml-ruby-2.6.0/lib/libxml/schema/element.rb:18: warning: method redefined; discarding old annotation
+2017-11-24 06:05:12 +0000  OS X 10.12.6 16G29
+2017-11-24 06:05:12 +0000  ENV: {"PATH"=>"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/bin:/bin:/usr/sbin:/sbin", "MallocNanoZone"=>"0", "TMPDIR"=>"/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/", "LOGNAME"=>"zm", "XPC_FLAGS"=>"0x0", "HOME"=>"/Users/zm", "Apple_PubSub_Socket_Render"=>"/private/tmp/com.apple.launchd.QvbzWIv6l2/Render", "USER"=>"zm", "SSH_AUTH_SOCK"=>"/private/tmp/com.apple.launchd.6dp1HQqDOZ/Listeners", "XPC_SERVICE_NAME"=>"com.apple.dt.Xcode.64552", "SHELL"=>"/bin/bash", "__CF_USER_TEXT_ENCODING"=>"0x1F5:0x19:0x34"}
+ARGV: ["/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/XcodeDistPipeline.yWo/Root", "--json", "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool-json-filepath-KekxnM", "--compile-bitcode", "--output", "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/IDEIPAProcessor.AppThinning.Qr9", "--toolchain", "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr", "--platforms", "/Applications/Xcode.app/Contents/Developer/Platforms"]
+2017-11-24 06:05:12 +0000  warning: Configuration issue: platform AppleTVSimulator.platform doesn't have any non-simulator SDKs; ignoring it
+2017-11-24 06:05:12 +0000  warning: Configuration issue: platform iPhoneSimulator.platform doesn't have any non-simulator SDKs; ignoring it
+2017-11-24 06:05:12 +0000  warning: Configuration issue: platform WatchSimulator.platform doesn't have any non-simulator SDKs; ignoring it
+2017-11-24 06:05:12 +0000  Scanning IPA...
+2017-11-24 06:05:13 +0000  Complete LinkageGraph:
+    TestCamera.app/TestCamera armv7 ->
+    
+    TestCamera.app/TestCamera arm64 ->
+2017-11-24 06:05:13 +0000  Validating IPA structure...
+2017-11-24 06:05:13 +0000  Compiling bitcode...
+2017-11-24 06:05:13 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/bitcode-build-tool -v -t /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk -o /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera --generate-dsym /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera.dSYM --strip-swift-symbols /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera
+2017-11-24 06:05:13 +0000    Compiling bitcode for armv7...
+    Compiling armv7 bitcode in 'TestCamera'
+2017-11-24 06:05:18 +0000      /Applications/Xcode.app/Contents/Developer/usr/bin/bitcode-build-tool exited with pid 45174 exit 0
+    Stdout:
+        Debug: SDK path: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk
+        Debug: PATH: ['/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin', '/Applications/Xcode.app/Contents/Developer/usr/bin']
+        Debug: Using: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo
+        MachoInfo: cd /
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo" "-info" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera" 
+        -= Output =-
+        Non-fat file: /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera is architecture: armv7
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Debug: Using: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dwarfdump
+        GetUUID: cd /
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dwarfdump" "-u" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera" 
+        -= Output =-
+        UUID: BF3649D0-C8ED-380E-A7A2-3944F597269F (armv7) /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Debug: Using: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/segedit
+        ExtractXAR: cd /
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/segedit" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera" "-extract" "__LLVM" "__bundle" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/TestCameraDIrfjQ/TestCamera.armv7.xar" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Debug: Bitcode bundle version: 1.0
+        Debug: Setting platform to: iPhoneOS
+        Debug: Using: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+        Debug: Using: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "01" "-o" "01.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "02" "-o" "02.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "03" "-o" "03.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-
+2017-11-24 06:05:18 +0000  apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "04" "-o" "04.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "05" "-o" "05.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "06" "-o" "06.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "07" "-o" "07.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "08" "-o" "08.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "09" "-o" "09.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "10" "-o" "10.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "11" "-o" "11.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "12" "-o" "12.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "13" "-o" "13.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/
+2017-11-24 06:05:18 +0000  folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "14" "-o" "14.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "15" "-o" "15.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "16" "-o" "16.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "17" "-o" "17.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "18" "-o" "18.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "19" "-o" "19.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "20" "-o" "20.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "21" "-o" "21.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "22" "-o" "22.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-
+2017-11-24 06:05:18 +0000  abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "23" "-o" "23.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "24" "-o" "24.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "25" "-o" "25.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "26" "-o" "26.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "27" "-o" "27.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "28" "-o" "28.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "29" "-o" "29.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "30" "-o" "30.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "31" "-o" "31.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "32" "-o" "32.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+     
+2017-11-24 06:05:18 +0000     "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "33" "-o" "33.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "34" "-o" "34.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "35" "-o" "35.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "36" "-o" "36.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "37" "-o" "37.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "38" "-o" "38.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "39" "-o" "39.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "40" "-o" "40.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "41" "-o" "41.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "42" "-
+2017-11-24 06:05:18 +0000  o" "42.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "thumbv7-apple-ios4.3.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "apcs-gnu" "-mfloat-abi" "soft" "-Os" "-x" "ir" "43" "-o" "43.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libobjc.A.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libSystem.B.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Security.framework/Security.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libobjc.A.tbd
+        Ld: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempXNO4wt
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" "-arch" "armv7" "-execute" "-ios_version_min" "8.0.0" "-e" "_main" "-rpath" "@executable_path/Frameworks" "-executable_path" "/Users/zm/Library/Developer/Xcode/DerivedData/TestCamera-dsjietwdweptpwdvjtrndqbpgoaz/Build/Intermediates.noindex/ArchiveInter
+2017-11-24 06:05:18 +0000  mediates/TestCamera/IntermediateBuildFilesPath/TestCamera.build/Release-iphoneos/TestCamera.build/Objects-normal/armv7/TestCamera" "-dead_strip" "-syslibroot" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk" "-sdk_version" "11.1.0" "-filelist" "/private/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/TestCameraDIrfjQ/TestCamera.armv7.out.LinkFileList" "-ignore_auto_link" "-allow_dead_duplicates" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libobjc.A.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libSystem.B.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Security.framework/Security.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libobjc.A.tbd" "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.ios.a" "-o" "/private/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/TestCameraDIrfjQ/TestCamera.armv7.out" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        warning: Cannot genarte useful dsym from input macho file: /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera
+        
+        GetUUID: cd /
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dwarfdump" "-u" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera" 
+        -= Output =-
+        UUID: D6CB7361-6543-39C4-8167-7330E48B03C6 (armv7) /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Debug:
+2017-11-24 06:05:18 +0000   Using: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil
+        Dsymutil: cd /
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera" "-o" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera.dSYM" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Debug: Using: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip
+        StripSymbols: cd /
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+    
+    Stderr:
+/Applications/Xcode.app/Contents/Developer/usr/bin/symbols -failIfMissingDsym -symbolsPackageDir /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera
+2017-11-24 06:05:18 +0000      /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with pid 45235 exit 0
+    Stdout:
+        /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/armv7/Payload/TestCamera.app/TestCamera [armv7, 0.002113 seconds]:
+    
+    Stderr:
+2017-11-24 06:05:18 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/bitcode-build-tool -v -t /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk -o /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera --generate-dsym /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera.dSYM --strip-swift-symbols /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera
+2017-11-24 06:05:18 +0000    Compiling bitcode for arm64...
+    Compiling arm64 bitcode in 'TestCamera'
+2017-11-24 06:05:22 +0000      /Applications/Xcode.app/Contents/Developer/usr/bin/bitcode-build-tool exited with pid 45244 exit 0
+    Stdout:
+        Debug: SDK path: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk
+        Debug: PATH: ['/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin', '/Applications/Xcode.app/Contents/Developer/usr/bin']
+        Debug: Using: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo
+        MachoInfo: cd /
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo" "-info" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera" 
+        -= Output =-
+        Non-fat file: /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera is architecture: arm64
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Debug: Using: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dwarfdump
+        GetUUID: cd /
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dwarfdump" "-u" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera" 
+        -= Output =-
+        UUID: 44FFEA3D-19C9-3216-8FEF-A3D14E7CA1FE (arm64) /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Debug: Using: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/segedit
+        ExtractXAR: cd /
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/segedit" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera" "-extract" "__LLVM" "__bundle" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/TestCameraAdGX94/TestCamera.arm64.xar" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Debug: Bitcode bundle version: 1.0
+        Debug: Setting platform to: iPhoneOS
+        Debug: Using: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+        Debug: Using: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "01" "-o" "01.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "02" "-o" "02.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "03" "-o" "03.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "da
+2017-11-24 06:05:22 +0000  rwinpcs" "-Os" "-x" "ir" "04" "-o" "04.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "05" "-o" "05.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "06" "-o" "06.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "07" "-o" "07.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "08" "-o" "08.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "09" "-o" "09.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "10" "-o" "10.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "11" "-o" "11.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "12" "-o" "12.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "13" "-o" "13.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "14" "-o" "
+2017-11-24 06:05:22 +0000  14.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "15" "-o" "15.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "16" "-o" "16.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "17" "-o" "17.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "18" "-o" "18.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "19" "-o" "19.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "20" "-o" "20.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "21" "-o" "21.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "22" "-o" "22.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "23" "-o" "23.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "24" "-o" "24.o" 
+        -= Output =-
+        
+2017-11-24 06:05:22 +0000  Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "25" "-o" "25.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "26" "-o" "26.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "27" "-o" "27.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "28" "-o" "28.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "29" "-o" "29.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "30" "-o" "30.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "31" "-o" "31.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "32" "-o" "32.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "33" "-o" "33.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "34" "-o" "34.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug
+2017-11-24 06:05:22 +0000  : Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "35" "-o" "35.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "36" "-o" "36.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "37" "-o" "37.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "38" "-o" "38.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "39" "-o" "39.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "40" "-o" "40.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "41" "-o" "41.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios8.0.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "42" "-o" "42.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Clang: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" "-cc1" "-triple" "arm64-apple-ios4.3.0" "-emit-obj" "-disable-llvm-passes" "-target-abi" "darwinpcs" "-Os" "-x" "ir" "43" "-o" "43.o" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation.tbd
+        Debug: Found 
+2017-11-24 06:05:22 +0000  framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libobjc.A.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libSystem.B.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Security.framework/Security.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration.tbd
+        Debug: Found framework/dylib: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libobjc.A.tbd
+        Ld: cd /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/tempmiQKg9
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" "-arch" "arm64" "-execute" "-ios_version_min" "8.0.0" "-e" "_main" "-rpath" "@executable_path/Frameworks" "-executable_path" "/Users/zm/Library/Developer/Xcode/DerivedData/TestCamera-dsjietwdweptpwdvjtrndqbpgoaz/Build/Intermediates.noindex/ArchiveIntermediates/TestCamera/IntermediateBuildFilesPath/TestCamera.build/Release-iphoneos/TestCamera.build/Objects-normal/arm64/TestCamera" "-dead_strip" "-syslibroot" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk" "-sdk_version" "11.1.0" "-filelist" "/private/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/TestCameraAdGX94/TestCamera.arm64.out.LinkFileList" "-ignore_auto_link" "-allow_dead_duplicates" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics.t
+2017-11-24 06:05:22 +0000  bd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libobjc.A.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libSystem.B.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Security.framework/Security.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration.tbd" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libobjc.A.tbd" "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.ios.a" "-o" "/private/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/TestCameraAdGX94/TestCamera.arm64.out" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        warning: Cannot genarte useful dsym from input macho file: /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera
+        
+        GetUUID: cd /
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dwarfdump" "-u" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera" 
+        -= Output =-
+        UUID: 116598A2-FACD-39C1-806C-D6257B1B675D (arm64) /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Debug: Using: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil
+        Dsymutil: cd /
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera" "-o" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera.dSYM" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+        Debug: Using: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip
+        StripSymbols: cd /
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera
+2017-11-24 06:05:22 +0000  .app/TestCamera" 
+        -= Output =-
+        Exited with 0
+        
+        Debug: Command took 0 seconds
+    
+    Stderr:
+/Applications/Xcode.app/Contents/Developer/usr/bin/symbols -failIfMissingDsym -symbolsPackageDir /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera
+2017-11-24 06:05:22 +0000      /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with pid 45301 exit 0
+    Stdout:
+        /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/ipatool20171124-45037-zdih52/thinned/arm64/Payload/TestCamera.app/TestCamera [arm64, 0.001273 seconds]:
+    
+    Stderr:
+2017-11-24 06:05:22 +0000  Creating universal IPA contents for all devices
+  Creating directory /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/IDEIPAProcessor.AppThinning.Qr9/universal
+  Copying TestCamera.app output payload directory
+2017-11-24 06:05:22 +0000    Copying .dSYM files to /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/IDEIPAProcessor.AppThinning.Qr9/universal/dSYMs
+  Copying .symbols files to /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/IDEIPAProcessor.AppThinning.Qr9/universal/Symbols
+2017-11-24 06:05:22 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/ipatool exited with 0
+2017-11-24 06:05:22 +0000  ipatool JSON: {
+    alerts =     (
+                {
+            code = 2819;
+            description = "Configuration issue: platform AppleTVSimulator.platform doesn't have any non-simulator SDKs; ignoring it";
+            info =             {
+            };
+            level = WARN;
+        },
+                {
+            code = 2819;
+            description = "Configuration issue: platform iPhoneSimulator.platform doesn't have any non-simulator SDKs; ignoring it";
+            info =             {
+            };
+            level = WARN;
+        },
+                {
+            code = 2819;
+            description = "Configuration issue: platform WatchSimulator.platform doesn't have any non-simulator SDKs; ignoring it";
+            info =             {
+            };
+            level = WARN;
+        }
+    );
+    thinnableAssetCatalogs =     (
+        "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/XcodeDistPipeline.yWo/Root/Payload/TestCamera.app/Assets.car"
+    );
+    universalIPA =     {
+        path = "/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/IDEIPAProcessor.AppThinning.Qr9/universal";
+    };
+}
+2017-11-24 06:05:22 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2017-11-24 06:05:22 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2017-11-24 06:05:22 +0000  Processing step: IDEDistributionSymbolsStep
+2017-11-24 06:05:22 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2017-11-24 06:05:22 +0000  Processing step: IDEDistributionAppThinningStep
+2017-11-24 06:05:22 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2017-11-24 06:05:22 +0000  Processing step: IDEDistributionODRStep
+2017-11-24 06:05:22 +0000  Processing step: IDEDistributionStripXattrsStep
+2017-11-24 06:05:22 +0000  Running /usr/bin/xattr '-crs' '/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/XcodeDistPipeline.yWo/Root/Payload/TestCamera.app'
+2017-11-24 06:05:22 +0000  /usr/bin/xattr exited with 0
+2017-11-24 06:05:22 +0000  Processing step: IDEDistributionCodesignStep
+2017-11-24 06:05:22 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7faf0fd2e9c0 'com.pwc.camera' '<DVTFilePath:0x7faf10fdefe0:'/Users/zm/Library/Developer/Xcode/Archives/2017-11-24/TestCamera 2017-11-24 下午2.04.xcarchive/Products/Applications/TestCamera.app'>'> from <IDEiCloudEntitlementsProcessor: 0x7faf0b6b3970>: {
+}
+2017-11-24 06:05:22 +0000  Entitlements for <IDEDistributionItem: 0x7faf0fd2e9c0 'com.pwc.camera' '<DVTFilePath:0x7faf10fdefe0:'/Users/zm/Library/Developer/Xcode/Archives/2017-11-24/TestCamera 2017-11-24 下午2.04.xcarchive/Products/Applications/TestCamera.app'>'>: {
+    "application-identifier" = "54SFE2ZV26.com.pwc.camera";
+    "com.apple.developer.team-identifier" = 54SFE2ZV26;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "54SFE2ZV26.com.pwccn.PwCSSO"
+    );
+}
+2017-11-24 06:05:22 +0000  Writing entitlements for <IDEDistributionItem: 0x7faf0fd2e9c0 'com.pwc.camera' '<DVTFilePath:0x7faf10fdefe0:'/Users/zm/Library/Developer/Xcode/Archives/2017-11-24/TestCamera 2017-11-24 下午2.04.xcarchive/Products/Applications/TestCamera.app'>'> to: /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/XcodeDistPipeline.yWo/entitlementsd0yhfR
+2017-11-24 06:05:22 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '26E62FD8043DC99B92B3D2163DA49CE71600D269' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/XcodeDistPipeline.yWo/entitlementsd0yhfR' '/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/XcodeDistPipeline.yWo/Root/Payload/TestCamera.app'
+2017-11-24 06:05:22 +0000  /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/XcodeDistPipeline.yWo/Root/Payload/TestCamera.app: signed app bundle with Mach-O universal (armv7 arm64) [com.pwc.camera]
+2017-11-24 06:05:22 +0000  
+2017-11-24 06:05:22 +0000  /usr/bin/codesign exited with 0
+2017-11-24 06:05:22 +0000  Processing step: IDEDistributionStreamingZipItemStep
+2017-11-24 06:05:22 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2017-11-24 06:05:22 +0000  Processing step: IDEDistributionCreateIPAStep
+2017-11-24 06:05:22 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/XcodeDistPipeline.yWo/Root' '/var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/XcodeDistPipeline.yWo/Packages/TestCamera.ipa'
+2017-11-24 06:05:22 +0000  >>> Copying /var/folders/mn/jp2_90d16qb5m5_bbpyfj_8h0000gn/T/XcodeDistPipeline.yWo/Root 
+2017-11-24 06:05:22 +0000  copying file ./Payload/TestCamera.app/_CodeSignature/CodeResources ... 
+2017-11-24 06:05:22 +0000  23025 bytes for ./Payload/TestCamera.app/_CodeSignature/CodeResources
+2017-11-24 06:05:22 +0000  copying file ./Payload/TestCamera.app/AppIcon20x20@2x.png ... 
+2017-11-24 06:05:22 +0000  2598 bytes for ./Payload/TestCamera.app/AppIcon20x20@2x.png
+copying file ./Payload/TestCamera.app/AppIcon20x20@2x~ipad.png ... 
+2017-11-24 06:05:22 +0000  2598 bytes for ./Payload/TestCamera.app/AppIcon20x20@2x~ipad.png
+copying file ./Payload/TestCamera.app/AppIcon20x20@3x.png ... 
+2017-11-24 06:05:22 +0000  4332 bytes for ./Payload/TestCamera.app/AppIcon20x20@3x.png
+copying file ./Payload/TestCamera.app/AppIcon20x20~ipad.png ... 
+2017-11-24 06:05:22 +0000  1023 bytes for ./Payload/TestCamera.app/AppIcon20x20~ipad.png
+copying file ./Payload/TestCamera.app/AppIcon29x29@2x.png ... 
+2017-11-24 06:05:22 +0000  4158 bytes for ./Payload/TestCamera.app/AppIcon29x29@2x.png
+2017-11-24 06:05:22 +0000  copying file ./Payload/TestCamera.app/AppIcon29x29@2x~ipad.png ... 
+2017-11-24 06:05:22 +0000  4158 bytes for ./Payload/TestCamera.app/AppIcon29x29@2x~ipad.png
+copying file ./Payload/TestCamera.app/AppIcon29x29@3x.png ... 
+2017-11-24 06:05:22 +0000  7066 bytes for ./Payload/TestCamera.app/AppIcon29x29@3x.png
+copying file ./Payload/TestCamera.app/AppIcon29x29~ipad.png ... 
+1739 bytes for ./Payload/TestCamera.app/AppIcon29x29~ipad.png
+copying file ./Payload/TestCamera.app/AppIcon40x40@2x.png ... 
+2017-11-24 06:05:22 +0000  6472 bytes for ./Payload/TestCamera.app/AppIcon40x40@2x.png
+copying file ./Payload/TestCamera.app/AppIcon40x40@2x~ipad.png ... 
+2017-11-24 06:05:22 +0000  6472 bytes for ./Payload/TestCamera.app/AppIcon40x40@2x~ipad.png
+copying file ./Payload/TestCamera.app/AppIcon40x40@3x.png ... 
+2017-11-24 06:05:22 +0000  10452 bytes for ./Payload/TestCamera.app/AppIcon40x40@3x.png
+copying file ./Payload/TestCamera.app/AppIcon40x40~ipad.png ... 
+2017-11-24 06:05:22 +0000  2598 bytes for ./Payload/TestCamera.app/AppIcon40x40~ipad.png
+copying file ./Payload/TestCamera.app/AppIcon60x60@2x.png ... 
+2017-11-24 06:05:22 +0000  10452 bytes for ./Payload/TestCamera.app/AppIcon60x60@2x.png
+copying file ./Payload/TestCamera.app/AppIcon60x60@3x.png ... 
+2017-11-24 06:05:22 +0000  17368 bytes for ./Payload/TestCamera.app/AppIcon60x60@3x.png
+copying file ./Payload/TestCamera.app/AppIcon76x76@2x~ipad.png ... 
+2017-11-24 06:05:22 +0000  14080 bytes for ./Payload/TestCamera.app/AppIcon76x76@2x~ipad.png
+copying file ./Payload/TestCamera.app/AppIcon76x76~ipad.png ... 
+2017-11-24 06:05:22 +0000  5924 bytes for ./Payload/TestCamera.app/AppIcon76x76~ipad.png
+copying file ./Payload/TestCamera.app/AppIcon83.5x83.5@2x~ipad.png ... 
+2017-11-24 06:05:22 +0000  15862 bytes for ./Payload/TestCamera.app/AppIcon83.5x83.5@2x~ipad.png
+copying file ./Payload/TestCamera.app/archived-expanded-entitlements.xcent ... 
+2017-11-24 06:05:22 +0000  289 bytes for ./Payload/TestCamera.app/archived-expanded-entitlements.xcent
+copying file ./Payload/TestCamera.app/Assets.car ... 
+2017-11-24 06:05:22 +0000  162696 bytes for ./Payload/TestCamera.app/Assets.car
+2017-11-24 06:05:22 +0000  copying file ./Payload/TestCamera.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2017-11-24 06:05:22 +0000  1791 bytes for ./Payload/TestCamera.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Payload/TestCamera.app/Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+258 bytes for ./Payload/TestCamera.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+copying file ./Payload/TestCamera.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+832 bytes for ./Payload/TestCamera.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Payload/TestCamera.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib ... 
+2017-11-24 06:05:22 +0000  3060 bytes for ./Payload/TestCamera.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+copying file ./Payload/TestCamera.app/Base.lproj/Main.storyboardc/Info.plist ... 
+2017-11-24 06:05:22 +0000  197 bytes for ./Payload/TestCamera.app/Base.lproj/Main.storyboardc/Info.plist
+copying file ./Payload/TestCamera.app/Base.lproj/Main.storyboardc/ViewController.nib ... 
+2017-11-24 06:05:22 +0000  993 bytes for ./Payload/TestCamera.app/Base.lproj/Main.storyboardc/ViewController.nib
+2017-11-24 06:05:22 +0000  copying file ./Payload/TestCamera.app/Disconnection.html ... 
+2017-11-24 06:05:22 +0000  1211 bytes for ./Payload/TestCamera.app/Disconnection.html
+copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_cancel.png ... 
+2017-11-24 06:05:22 +0000  358 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_cancel.png
+2017-11-24 06:05:22 +0000  copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_cancel@2x.png ... 
+2017-11-24 06:05:22 +0000  598 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_cancel@2x.png
+copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_cancel@3x.png ... 
+2017-11-24 06:05:22 +0000  1011 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_cancel@3x.png
+copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_auto.png ... 
+2017-11-24 06:05:22 +0000  537 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_auto.png
+copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_auto@2x.png ... 
+2017-11-24 06:05:22 +0000  1170 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_auto@2x.png
+2017-11-24 06:05:22 +0000  copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_auto@3x.png ... 
+2017-11-24 06:05:22 +0000  1829 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_auto@3x.png
+copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_off.png ... 
+2017-11-24 06:05:22 +0000  508 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_off.png
+2017-11-24 06:05:22 +0000  copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_off@2x.png ... 
+2017-11-24 06:05:22 +0000  979 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_off@2x.png
+copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_off@3x.png ... 
+2017-11-24 06:05:22 +0000  1595 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_off@3x.png
+copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_on.png ... 
+2017-11-24 06:05:22 +0000  415 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_on.png
+copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_on@2x.png ... 
+2017-11-24 06:05:22 +0000  810 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_on@2x.png
+copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_on@3x.png ... 
+2017-11-24 06:05:22 +0000  1386 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_flash_on@3x.png
+2017-11-24 06:05:22 +0000  copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_switch.png ... 
+2017-11-24 06:05:22 +0000  645 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_switch.png
+copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_switch@2x.png ... 
+2017-11-24 06:05:22 +0000  1342 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_switch@2x.png
+copying file ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_switch@3x.png ... 
+2311 bytes for ./Payload/TestCamera.app/DKCameraResource.bundle/Images/camera_switch@3x.png
+copying file ./Payload/TestCamera.app/embedded.mobileprovision ... 
+2017-11-24 06:05:22 +0000  9411 bytes for ./Payload/TestCamera.app/embedded.mobileprovision
+copying file ./Payload/TestCamera.app/Info.plist ... 
+2017-11-24 06:05:22 +0000  4116 bytes for ./Payload/TestCamera.app/Info.plist
+copying file ./Payload/TestCamera.app/LaunchImage-700-568h@2x.png ... 
+14942 bytes for ./Payload/TestCamera.app/LaunchImage-700-568h@2x.png
+copying file ./Payload/TestCamera.app/PkgInfo ... 
+8 bytes for ./Payload/TestCamera.app/PkgInfo
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_cancel.png ... 
+358 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_cancel.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_cancel@2x.png ... 
+598 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_cancel@2x.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_cancel@3x.png ... 
+1011 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_cancel@3x.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_auto.png ... 
+537 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_auto.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_auto@2x.png ... 
+2017-11-24 06:05:22 +0000  1170 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_auto@2x.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_auto@3x.png ... 
+1829 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_auto@3x.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_off.png ... 
+508 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_off.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_off@2x.png ... 
+979 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_off@2x.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_off@3x.png ... 
+1595 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_off@3x.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_on.png ... 
+415 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_on.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_on@2x.png ... 
+810 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_on@2x.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_on@3x.png ... 
+1386 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_flash_on@3x.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_switch.png ... 
+2017-11-24 06:05:22 +0000  645 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_switch.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_switch@2x.png ... 
+2017-11-24 06:05:22 +0000  1342 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_switch@2x.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_switch@3x.png ... 
+2017-11-24 06:05:22 +0000  2311 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_switch@3x.png
+2017-11-24 06:05:22 +0000  copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_trigger.png ... 
+2017-11-24 06:05:22 +0000  1362 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_trigger.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_trigger@2x.png ... 
+2017-11-24 06:05:22 +0000  1879 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_trigger@2x.png
+copying file ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_trigger@3x.png ... 
+2017-11-24 06:05:22 +0000  3482 bytes for ./Payload/TestCamera.app/PWCameraResource.bundle/Images/camera_trigger@3x.png
+2017-11-24 06:05:22 +0000  copying file ./Payload/TestCamera.app/TestCamera ... 
+2017-11-24 06:05:22 +0000  745984 bytes for ./Payload/TestCamera.app/TestCamera
+2017-11-24 06:05:22 +0000  /usr/bin/ditto exited with 0
+2017-11-24 06:05:22 +0000  Processing step: IDEDistributionCreateManifestStep

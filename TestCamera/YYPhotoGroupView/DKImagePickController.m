@@ -8,6 +8,7 @@
 
 #import "DKImagePickController.h"
 #import "DKCamera.h"
+#import "PWCameraViewController.h"
 @interface DKImagePickController ()
 
 @end
@@ -15,7 +16,11 @@
 @implementation DKImagePickController
 - (instancetype)init{
     if (self= [super init]) {
-        DKCamera * rootVC = [DKCamera new];
+//        DKCamera * rootVC = [DKCamera new];
+//        self.viewControllers = @[rootVC];
+//        self.navigationBar.hidden = YES;
+        
+        PWCameraViewController * rootVC = [PWCameraViewController new];
         self.viewControllers = @[rootVC];
         self.navigationBar.hidden = YES;
     }
@@ -24,6 +29,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    PWCameraViewController *vc = (PWCameraViewController*)self.viewControllers.firstObject;
+    vc.maxCaptureCount = _maxCaptureCount;
     // Do any additional setup after loading the view.
 }
 

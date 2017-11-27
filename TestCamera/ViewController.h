@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <JavaScriptCore/JavaScriptCore.h>
 
+@protocol TestJSExport<JSExport>
+JSExportAs
+(openCamera,
+ - (void)showToastWithParameters:(NSString *)parameterone parametertwo:(NSString *)parametertwo
+ );
+
+JSExportAs
+(openFile,
+ - (void)openFileWithParameters:(NSString *)parameterone parametertwo:(NSString *)parametertwo
+ );
+@end
 @interface ViewController : UIViewController
 
 
